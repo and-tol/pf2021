@@ -6,3 +6,6 @@
 /public/*
 /.next
 next-env.d.ts
+*.css
+*.scss
+*.svg

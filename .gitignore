@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -79,7 +80,6 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -113,6 +113,7 @@ web_modules/
 .env
 .env.test
 .env.production
+.env*.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -162,13 +163,12 @@ dist
 **/*.backup.*
 **/*.back.*
 
-node_modules
-
 *.sublime*
 
 psd
 thumb
 sketch
+fig
 
 ### Sass ###
 .sass-cache/
@@ -219,3 +219,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,react,node,sass
+
+
+# local folder
+local
