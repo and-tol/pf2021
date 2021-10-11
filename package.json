@@ -2,14 +2,19 @@
   "name": "pf2021",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/and-tol/pf2021.git"
+  },
   "scripts": {
     "dev": "next dev -p 3005",
     "build": "next build -p 3005",
     "start": "next start -p 3005",
-    "stylelint:fix": "stylelint \"**/*.{css,scss}\" --fix",
-    "eslint": "eslint --ext 'src/**/*.{js,ts,tsx}' --quiet",
-    "eslint:fix": "eslint --ext 'src/**/*.{js,ts,tsx}' --quiet --fix",
-    "prettier:fix": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
+    "stylelint:fix": "stylelint './**/*.{css,scss}' --fix",
+    "eslint": "eslint --ext './**/*.{js,ts,tsx}' --quiet",
+    "eslint:fix": "eslint --ext './**/*.{js,ts,tsx}' --quiet --fix",
+    "prettier": "prettier  --check './**/*.{js,ts,tsx,css,html}'",
+    "prettier:fix": "prettier --write './**/*.{js,ts,tsx,css,html}' ",
     "prepare": "husky install"
   },
   "lint-staged": {
