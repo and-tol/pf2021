@@ -10,11 +10,11 @@
     "dev": "next dev -p 3005",
     "build": "next build -p 3005",
     "start": "next start -p 3005",
-    "stylelint:fix": "stylelint './**/*.{css,scss}' --fix",
-    "eslint": "eslint --ext './**/*.{js,ts,tsx}' --quiet",
-    "eslint:fix": "eslint --ext './**/*.{js,ts,tsx}' --quiet --fix",
-    "prettier": "prettier  --check './**/*.{js,ts,tsx,css,html}'",
-    "prettier:fix": "prettier --write './**/*.{js,ts,tsx,css,html}' ",
+    "stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix",
+    "eslint": "eslint --ext 'src/**/*.{js,ts,tsx}' --quiet",
+    "eslint:fix": "eslint --ext 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "prettier": "prettier  --check 'src/**/*.{js,ts,tsx,css,html}'",
+    "prettier:fix": "prettier --write 'src/**/*.{js,ts,tsx,css,html}' ",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -43,6 +43,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-i18next": "^11.12.0",
+    "sass": "^1.42.1",
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
