@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { Languages, Logo, Navigation } from '../../components';
+import { LanguagesNav, Logo, Navigation } from '../../components';
 import { appLanguages, sections } from '../../utils/AppConfig';
 import { HeaderProps } from './Header.props';
 
@@ -23,7 +23,7 @@ export const Header = ({
         })}
       </Navigation>
 
-      {appLanguages.length > 1 && <Languages />}
+      {appLanguages.length > 1 && <LanguagesNav />}
     </header>
   );
 };

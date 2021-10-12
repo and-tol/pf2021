@@ -4,6 +4,7 @@ export const AppConfig = {
   description:
     'Starter code for my Nextjs Boilerplate Landing Page with Module CSS',
   locale: 'ru',
+  keywords: '',
 };
 
 // export const AppLanguages: string[] = ['eng', 'rus', 'lat'];
@@ -41,5 +42,3 @@ export const appLanguages: AppLanguages[] = [
     path: '/rus',
   },
 ];
-
-

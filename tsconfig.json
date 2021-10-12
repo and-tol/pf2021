@@ -21,10 +21,12 @@
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
   ],
   "exclude": [
     "node_modules",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "declaretion.d.ts",
+    "image.d.ts"
   ]
 }
