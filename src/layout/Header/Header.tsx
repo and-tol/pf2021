@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import React from 'react';
-import { LanguagesNav, Logo, Navigation } from '../../components';
-import { appLanguages, sections } from '../../utils/AppConfig';
-import { HeaderProps } from './Header.props';
+import Link from "next/link";
+import React from "react";
+import { LanguagesNav, Logo, Navigation } from "../../components";
+import { appLanguages, sections } from "../../utils/AppConfig";
+import { HeaderProps } from "./Header.props";
 
 export const Header = ({
   className,

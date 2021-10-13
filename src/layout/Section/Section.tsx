@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
-import { SectionProps } from './Section.props';
+import { PropsWithChildren } from "react";
+import { SectionProps } from "./Section.props";
 
 export const Section = ({
   children,

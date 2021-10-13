@@ -1,6 +1,6 @@
-import React from 'react';
-import { Section } from '../layout';
-import { Layout } from '../layout/Layout';
+import React from "react";
+import { Section } from "../layout";
+import { Layout } from "../layout/Layout";
 
 export default function Index(): JSX.Element {
   return (
@@ -14,4 +14,3 @@ export default function Index(): JSX.Element {
     </Layout>
   );
 }
-

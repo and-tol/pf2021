@@ -13,8 +13,8 @@
     "stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix",
     "eslint": "eslint src --ext .ts,.tsx",
     "eslint:fix": "npm run eslint -- --fix",
-    "prettier": "prettier  --check 'src/**/*.{js,ts,tsx,css,html}'",
-    "prettier:fix": "prettier --write 'src/**/*.{js,ts,tsx,css,html}' ",
+    "prettier": "prettier --check src",
+    "prettier:fix": "prettier src --write",
     "prepare": "husky install"
   },
   "lint-staged": {
