@@ -1,7 +1,10 @@
-const { i18n } = require('./next-i18next.config');
-
+// Localized routing
 module.exports = {
-  i18n,
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'ru',
+    // localePath: path.resolve('./public/static/locales'),
+  },
 };
 
 // Ability to use svg as components
