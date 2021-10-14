@@ -1,7 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import { LanguagesNav, Logo, Navigation } from "../../components";
-import { appLanguages, sections } from "../../utils/AppConfig";
+import { sections } from "../../utils/App.config";
+import { appLanguages } from "../../utils/Locale.config";
 import { HeaderProps } from "./Header.props";
 
 export const Header = ({
@@ -15,7 +15,7 @@ export const Header = ({
 
       <Navigation />
 
-      {appLanguages.length > 1 && <LanguagesNav />}
+      {Object.keys(appLanguages).length > 1 && <LanguagesNav />}
     </header>
   );
 };
