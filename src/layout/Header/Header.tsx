@@ -13,15 +13,7 @@ export const Header = ({
     <header {...props}>
       {isLogo && <Logo />}
 
-      <Navigation>
-        {sections.map(({ id, sectionName }) => {
-          return (
-            <Link href={`#${id}`}>
-              <a>{sectionName}</a>
-            </Link>
-          );
-        })}
-      </Navigation>
+      <Navigation />
 
       {appLanguages.length > 1 && <LanguagesNav />}
     </header>

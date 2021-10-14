@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { appLanguages } from "../../utils/AppConfig";
 import { LanguagesNavProps } from "./LanguagesNav.props";
 

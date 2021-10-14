@@ -1,8 +1,17 @@
-import { PropsWithChildren } from "react";
+import Link from "next/link";
+import { sections } from "../../utils/AppConfig";
 import { NavigationProps } from "./Navigation.props";
 
-export const Navigation = ({
-  children,
-}: PropsWithChildren<NavigationProps>): JSX.Element => {
-  return <nav>{children}</nav>;
+export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
+  return (
+    <nav {...props}>
+      {sections.map(({ id, sectionName }) => {
+        return (
+          <Link href={`#${id}`}>
+            <a>{sectionName}</a>
+          </Link>
+        );
+      })}
+    </nav>
+  );
 };
