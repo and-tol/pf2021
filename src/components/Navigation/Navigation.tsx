@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sections } from "../../utils/AppConfig";
+import { sections } from "../../utils/App.config";
 import { NavigationProps } from "./Navigation.props";
 
 export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
