@@ -4,6 +4,12 @@ module.exports = {
   i18n,
 };
 
+module.exports = {
+  eslint: {
+    dirs: ["pages", "utils"], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+  },
+};
+
 // Ability to use svg as components
 module.exports = {
   webpack(config) {
