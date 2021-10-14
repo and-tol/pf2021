@@ -1,10 +1,10 @@
 export const AppConfig = {
-  site_name: 'Portfolio',
-  title: 'My Landing Page',
+  site_name: "Portfolio",
+  title: "My Landing Page",
   description:
-    'Starter code for my Nextjs Boilerplate Landing Page with Module CSS',
-  locale: 'ru',
-  keywords: '',
+    "Starter code for my Nextjs Boilerplate Landing Page with Module CSS",
+  locale: "ru",
+  keywords: "",
 };
 
 // export const AppLanguages: string[] = ['eng', 'rus', 'lat'];
@@ -20,25 +20,25 @@ export interface Sections {
 
 export const sections: Sections[] = [
   {
-    id: 'about',
-    sectionName: 'About',
+    id: "about",
+    sectionName: "About",
   },
   {
-    id: 'works',
-    sectionName: 'Works',
+    id: "works",
+    sectionName: "Works",
   },
   {
-    id: 'contacts',
-    sectionName: 'Contacts',
+    id: "contacts",
+    sectionName: "Contacts",
   },
 ];
 export const appLanguages: AppLanguages[] = [
   {
-    lang: 'eng',
-    path: '/',
+    lang: "eng",
+    path: "/",
   },
   {
-    lang: 'rus',
-    path: '/rus',
+    lang: "rus",
+    path: "/rus",
   },
 ];

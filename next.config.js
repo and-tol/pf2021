@@ -1,9 +1,14 @@
-// Localized routing
 module.exports = {
   i18n: {
-    locales: ['en', 'ru'],
-    defaultLocale: 'ru',
+    locales: ["en", "ru"],
+    defaultLocale: "ru",
     // localePath: path.resolve('./public/static/locales'),
+  },
+};
+
+module.exports = {
+  eslint: {
+    dirs: ["pages", "utils"], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
   },
 };
 
@@ -15,7 +20,7 @@ module.exports = {
       issuer: { and: [/\.(js|ts|md)x?$/] },
       use: [
         {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {
             prettier: false,
             svgo: true,

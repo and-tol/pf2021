@@ -13,6 +13,9 @@
       "jsx": true // Allows for the parsing of JSX
     },
     "settings": {
+      "next": {
+        "rootDir": "/packages/pf2021/"
+      },
       "react": {
         "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
       }
@@ -26,12 +29,15 @@
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended",
+      "next",
+      "next/core-web-vitals",
       "plugin:react/recommended",
       "plugin:react-hooks/recommended",
+      "plugin:@next/next/recommended",
       "prettier",
       "prettier/react",
-      "plugin:prettier/recommended",
-      "prettier/@typescript-eslint"
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
     ],
     "rules": {
       "semi": "off",
