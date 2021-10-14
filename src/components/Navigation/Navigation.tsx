@@ -7,7 +7,7 @@ export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
     <nav {...props}>
       {sections.map(({ id, sectionName }) => {
         return (
-          <Link href={`#${id}`}>
+          <Link key={id} href={`#${id}`}>
             <a>{sectionName}</a>
           </Link>
         );
