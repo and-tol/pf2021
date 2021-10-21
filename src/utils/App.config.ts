@@ -10,9 +10,9 @@ export const AppConfig = {
 };
 
 export enum IndexSectionsId {
-  about = "about",
-  works = "works",
-  contacts = "contacts",
+  About = "about",
+  Works = "works",
+  Contacts = "contacts",
 }
 export interface Section {
   id: string;
@@ -22,18 +22,18 @@ export interface Section {
 
 export const sections: Section[] = [
   {
-    id: IndexSectionsId.about,
+    id: IndexSectionsId.About,
     sectionName: "About",
-    path: `/#${IndexSectionsId.about}`,
+    path: `/#${IndexSectionsId.About}`,
   },
   {
-    id: IndexSectionsId.works,
+    id: IndexSectionsId.Works,
     sectionName: "Works",
-    path: `/#${IndexSectionsId.works}`,
+    path: `/#${IndexSectionsId.Works}`,
   },
   {
-    id: IndexSectionsId.contacts,
+    id: IndexSectionsId.Contacts,
     sectionName: "Contacts",
-    path: `/#${IndexSectionsId.contacts}`,
+    path: `/#${IndexSectionsId.Contacts}`,
   },
 ];
