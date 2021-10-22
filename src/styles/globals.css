@@ -3,9 +3,9 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: Lato, Lora, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif,
-    serif;
+  font-family: "Noto Serif Display", Lato, Lora, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif, serif;
 }
 
 a {
