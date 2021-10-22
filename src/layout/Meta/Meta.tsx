@@ -22,7 +22,7 @@ export const Meta = () => {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Lora:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Lora:wght@400;500;600&family=Noto+Serif+Display:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
