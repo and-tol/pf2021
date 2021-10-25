@@ -1,0 +1,27 @@
+$font-default: lato;
+$font-stack: $font-default, "Noto Serif Display", lora;
+
+$font-size: 1rem;
+
+$dark-blue-color: #1E252C;
+$light-blue-color: #A6C6E5;
+$orange: #D67419;
+$red: #C6333D;
+$white-color: #FFF;
+
+.bg-primary {
+  background: $dark-blue-color;
+}
+.bg-secondary {
+  background: $white-color;
+}
+.bg-accent-color {
+  background: $red;
+}
+
+.font-primary-color {
+  color: $light-blue-color;
+}
+.font-secondary-color {
+  color: $dark-blue-color;
+}
