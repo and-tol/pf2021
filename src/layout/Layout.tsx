@@ -10,9 +10,7 @@ export const Layout = ({
     <>
       <Meta />
       <Header isLogo={false} />
-      <main>
-        <div>{children}</div>
-      </main>
+      <main className={"bg-primary"}>{children}</main>
       <Footer />
     </>
   );

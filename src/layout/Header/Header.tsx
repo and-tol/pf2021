@@ -1,5 +1,5 @@
 import React from "react";
-import { LanguagesNav, Logo, Navigation } from "../../components";
+import { Hero, LanguagesNav, Logo, Navigation } from "../../components";
 import { sections } from "../../utils/App.config";
 import { appLanguages } from "../../utils/Locale.config";
 import { HeaderProps } from "./Header.props";
@@ -10,12 +10,16 @@ export const Header = ({
   ...props
 }: HeaderProps): JSX.Element => {
   return (
-    <header {...props}>
-      {isLogo && <Logo />}
+    <header className={"bg-primary"} {...props}>
+      <div className={"wrapper"}>
+        {isLogo && <Logo />}
 
-      <Navigation />
+        <Navigation />
 
-      {Object.keys(appLanguages).length > 1 && <LanguagesNav />}
+        {Object.keys(appLanguages).length > 1 && <LanguagesNav />}
+      </div>
+
+      <Hero />
     </header>
   );
 };
