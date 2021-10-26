@@ -20,11 +20,14 @@ module.exports = {
       options: {
         prettier: false,
         svgo: true,
-        svgoConfig: { plugins: [{ removeViewBox: false }] },
+        svgoConfig: {
+          plugins: [{ removeViewBox: false }],
+        },
         titleProp: true,
       },
-      test: /\.svg$/i,
+      test: /\.svg$/,
     });
+
     return config;
   },
 };

@@ -1,3 +1,18 @@
+.hero {
+  display: flex;
+
+  padding-top: 205px;
+}
+
+.heroContent {
+  min-width: 50%;
+}
+
 .heroTitle {
   margin-bottom: 3.5rem;
+}
+
+.heroDecorate {
+  position: relative;
+  right: 50px;
 }

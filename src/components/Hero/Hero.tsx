@@ -3,11 +3,12 @@ import React from "react";
 import { Heading, P } from "..";
 import { HeroProps } from "./Hero.props";
 import styles from "./Hero.module.scss";
+import DecorateImage from "./decorate.svg";
 export const Hero = ({ ...props }: HeroProps): JSX.Element => {
   return (
     <>
-      <div className={cn("wrapper")} {...props}>
-        <article>
+      <div className={cn("wrapper", styles.hero)} {...props}>
+        <article className={styles.heroContent}>
           <div className={styles.heroTitle}>
             <Heading tag="h1">Andrey Tolstoy</Heading>
             <Heading tag="h3">Frontend developer</Heading>
@@ -37,6 +38,9 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
             </P>
           </div>
         </article>
+        <div className={styles.heroDecorate}>
+          <DecorateImage />
+        </div>
       </div>
     </>
   );
