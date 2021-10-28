@@ -1,8 +1,7 @@
 declare module "*.svg" {
-  import React = require("react");
-  export const ReactComponent: React.FC<React.SVGAttributes<SVGSVGElement>>;
+  const content: React.FC<React.SVGAttributes<SVGElement>>;
   const src: string;
-  export default src;
+  export default content;
 }
 
 // this file is conditionally added/removed to next-env.d.ts

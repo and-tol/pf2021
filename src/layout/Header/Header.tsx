@@ -1,6 +1,5 @@
 import React from "react";
 import { Hero, LanguagesNav, Logo, Navigation } from "../../components";
-import { sections } from "../../utils/App.config";
 import { appLanguages } from "../../utils/Locale.config";
 import { HeaderProps } from "./Header.props";
 
@@ -11,6 +10,8 @@ export const Header = ({
 }: HeaderProps): JSX.Element => {
   return (
     <header className={"bg-primary"} {...props}>
+      <Hero />
+
       <div className={"wrapper"}>
         {isLogo && <Logo />}
 
@@ -18,8 +19,6 @@ export const Header = ({
 
         {Object.keys(appLanguages).length > 1 && <LanguagesNav />}
       </div>
-
-      <Hero />
     </header>
   );
 };
