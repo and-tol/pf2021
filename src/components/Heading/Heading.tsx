@@ -2,18 +2,27 @@ import cn from "classnames";
 import { HeadingProps } from "./Heading.props";
 import styles from "./Heading.module.scss";
 
-export const Heading = ({ tag, children }: HeadingProps): JSX.Element => {
+export const Heading = ({
+  tag,
+  children,
+  ...props
+}: HeadingProps): JSX.Element => {
+  const Tag = tag || "h1";
   switch (tag) {
     case "h1":
-      return (
-        <h1 className={cn(styles.h1, "font-primary-color")}>{children}</h1>
-      );
     case "h2":
       return (
-        <h2 className={cn(styles.h3, "font-primary-color")}>{children}</h2>
+        <Tag className={cn(styles[tag], "font-primary-color")} {...props}>
+          {children}
+        </Tag>
       );
+
     case "h3":
-      return <h3 className={cn(styles.h3, "font-third-color")}>{children}</h3>;
+      return (
+        <Tag className={cn(styles[tag], "font-third-color")} {...props}>
+          {children}
+        </Tag>
+      );
 
     default:
       return <></>;
