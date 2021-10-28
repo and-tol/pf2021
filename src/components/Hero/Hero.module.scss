@@ -5,7 +5,9 @@
 }
 
 .heroContent {
-  min-width: 50%;
+  z-index: 1;
+
+  min-width: 65%;
 }
 
 .heroTitle {
@@ -14,5 +16,5 @@
 
 .heroDecorate {
   position: relative;
-  right: 50px;
+  right: 308px;
 }
