@@ -3,29 +3,31 @@ $font-stack: $font-default, "Noto Serif Display", lora;
 
 $font-size: 1rem;
 
-$dark-blue-color: #1E252C;
-$light-blue-color: #A6C6E5;
+$dark-blue: #1E252C;
+$light-blue: #A6C6E5;
 $orange: #D67419;
 $orange-light: #E0A974;
 $red: #C6333D;
-$white-color: #FFF;
+$white: #FFF;
+$turquoise: #0C9C9D;
+$middle-blue: #205A7B;
 
 .bg-primary {
-  background: $dark-blue-color;
+  background: $dark-blue;
 }
 .bg-secondary {
-  background: $white-color;
+  background: $white;
 }
 .bg-accent-color {
   background: $red;
 }
 
 .font-primary-color {
-  color: $light-blue-color;
+  color: $light-blue;
 }
 .font-secondary-color {
-  color: $dark-blue-color;
+  color: $dark-blue;
 }
 .font-third-color {
-  color: $white-color;
+  color: $white;
 }

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import { Heading, P } from "..";
+import { Button, Heading, P } from "..";
 import { HeroProps } from "./Hero.props";
 import styles from "./Hero.module.scss";
 import DecorateImage from "./decorate.svg";
@@ -13,7 +13,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
             <Heading tag="h1">Andrey Tolstoy</Heading>
             <Heading tag="h3">Frontend developer</Heading>
           </div>
-          <div>
+          <div className={styles.heroText}>
             <P>
               I started as a graphic designer. I did the design and layout of
               booklets, flyers, packages.
@@ -37,6 +37,9 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               React ecosystem.
             </P>
           </div>
+          <Button className="font-primary-color" appearance="primary">
+            Download CV
+          </Button>
         </article>
         <div className={styles.heroDecorate}>
           <DecorateImage />
