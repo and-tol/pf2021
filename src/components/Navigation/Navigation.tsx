@@ -3,7 +3,7 @@ import Link from "next/link";
 import cn from "classnames";
 import { sections } from "../../utils/App.config";
 import { NavigationProps } from "./Navigation.props";
-import styles from "./Navigation.module.scss";
+import styles from "../../styles/Navigation.module.scss";
 import NavItemDots from "./horDots.svg";
 
 export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
