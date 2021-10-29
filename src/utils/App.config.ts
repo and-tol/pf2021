@@ -2,7 +2,7 @@ import { appLanguages } from "./Locale.config";
 
 export const AppConfig = {
   site_name: "Portfolio",
-  title: "My Landing Page",
+  title: "Andrey Tolstoy",
   description:
     "Starter code for my Nextjs Boilerplate Landing Page with Module CSS",
   locale: appLanguages.eng.lang,

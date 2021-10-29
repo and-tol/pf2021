@@ -1,0 +1,20 @@
+.hero {
+  display: flex;
+
+  padding-top: 205px;
+}
+
+.heroContent {
+  z-index: 1;
+
+  min-width: 65%;
+}
+
+.heroTitle {
+  margin-bottom: 3.5rem;
+}
+
+.heroDecorate {
+  position: relative;
+  right: 308px;
+}

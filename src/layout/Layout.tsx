@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from "react";
 import { LayoutProps } from "./Layout.props";
-import styles from "./Layout.module.css";
 import { Header, Footer, Meta } from ".";
 
 export const Layout = ({
@@ -8,11 +7,8 @@ export const Layout = ({
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
   return (
     <>
-      <Meta />
-      <Header isLogo={false} />
-      <main>
-        <div>{children}</div>
-      </main>
+      <Header />
+      <main className={"bg-primary"}>{children}</main>
       <Footer />
     </>
   );

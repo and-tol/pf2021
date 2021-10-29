@@ -6,6 +6,7 @@ $font-size: 1rem;
 $dark-blue-color: #1E252C;
 $light-blue-color: #A6C6E5;
 $orange: #D67419;
+$orange-light: #E0A974;
 $red: #C6333D;
 $white-color: #FFF;
 
@@ -24,4 +25,7 @@ $white-color: #FFF;
 }
 .font-secondary-color {
   color: $dark-blue-color;
+}
+.font-third-color {
+  color: $white-color;
 }

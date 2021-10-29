@@ -1,0 +1,38 @@
+@import "./design-tokens.scss";
+
+$margin-right: 1rem;
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  margin-right: $margin-right;
+
+  cursor: pointer;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: $white-color;
+
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.active {
+  color: $orange;
+
+  &:hover {
+    color: $orange-light;
+  }
+}
+
+.dots {
+  margin-right: $margin-right;
+}
