@@ -37,3 +37,30 @@ export const sections: Section[] = [
     path: `/#${IndexSectionsId.Contacts}`,
   },
 ];
+export enum IndexPagesId {
+  About = "about",
+  Works = "works",
+  Contacts = "contacts",
+}
+export interface Page {
+  id: string;
+  page: string;
+  path: string;
+}
+export const pages: Page[] = [
+  {
+    id: IndexPagesId.About,
+    page: "About",
+    path: `/`,
+  },
+  {
+    id: IndexPagesId.Works,
+    page: "Works",
+    path: `/#${IndexPagesId.Works}`,
+  },
+  {
+    id: IndexPagesId.Contacts,
+    page: "Contacts",
+    path: `/#${IndexPagesId.Contacts}`,
+  },
+];
