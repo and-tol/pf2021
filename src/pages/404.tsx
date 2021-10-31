@@ -10,14 +10,14 @@ const Error = () => {
   useEffect(() => {
     let timerId = setTimeout(() => {
       router.push("/");
-    }, 500);
+    }, 2000);
     return () => {
       clearTimeout(timerId);
     };
   }, [router]);
 
   return (
-    <div>
+    <div className="wrapper">
       <Head>
         <title>Error</title>
       </Head>
