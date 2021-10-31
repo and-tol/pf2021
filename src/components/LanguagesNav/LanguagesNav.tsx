@@ -2,13 +2,8 @@ import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import router, { useRouter } from "next/router";
 import Link from "next/link";
-import {
-  AppLanguage,
-  appLanguages,
-  LanguagesKeys,
-} from "../../utils/Locale.config";
+import { AppLanguage, appLanguages } from "../../utils/Locale.config";
 import { LanguagesNavProps } from "./LanguagesNav.props";
-import stylesLang from "./LanguagesNav.module.scss";
 import styles from "../../styles/Navigation.module.scss";
 import stylesDropdown from "./LanguagesNav.module.scss";
 import NavItemDots from "../../assets/horDots.svg";
@@ -41,7 +36,7 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
   return (
     <div>
       {!visible && (
-        <div className={stylesLang.navLang}>
+        <div className={stylesDropdown.navLang}>
           <button
             className={cn(
               "font-accent",
@@ -58,7 +53,7 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
       )}
       {visible && (
         <nav
-          className={cn(stylesLang.navLang, stylesDropdown.dropdownNav)}
+          className={cn(stylesDropdown.navLang, stylesDropdown.dropdownNav)}
           {...props}
         >
           {languages.map((lang: AppLanguage, idx: number): JSX.Element => {

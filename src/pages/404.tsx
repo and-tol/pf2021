@@ -4,7 +4,7 @@ import Head from "next/head";
 // import Heading from '../components/Heading';
 // import styles from '../styles/404.module.scss';
 
-const Error = () => {
+const Error = (): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
@@ -18,9 +18,9 @@ const Error = () => {
 
   return (
     <div className="wrapper">
-      <Head>
+      {/* <Head>
         <title>Error</title>
-      </Head>
+      </Head> */}
       <div>
         <h1>404</h1>
         <h2>Something is going wrong...</h2>
