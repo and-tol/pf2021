@@ -8,7 +8,7 @@ export const Layout = ({
   children,
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
   return (
-    <div className="wrap">
+    <div className={styles.contentContainer}>
       <Header />
       <main className={cn("bg-primary", styles.main)}>{children}</main>
       <Footer />

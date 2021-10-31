@@ -11,6 +11,7 @@ export const Footer = ({ isLogo, ...props }: FooterProps): JSX.Element => {
         {isLogo && <Logo />}
         <Navigation />
       </div>
+      <div className={styles.hidingBlock}></div>
     </footer>
   );
 };

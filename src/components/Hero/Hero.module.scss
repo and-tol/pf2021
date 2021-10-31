@@ -16,7 +16,14 @@
 
 .heroDecorate {
   position: relative;
+  top: -140px;
   right: 308px;
+
+  overflow: inherit;
+
+  svg {
+    max-height: 80vh;
+  }
 }
 
 .heroText {
