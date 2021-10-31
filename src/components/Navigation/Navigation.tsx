@@ -1,19 +1,33 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { sections } from "../../utils/App.config";
+import cn from "classnames";
+import { Page, pages } from "../../utils/App.config";
 import { NavigationProps } from "./Navigation.props";
-import styles from "./Navigation.module.scss";
+import styles from "../../styles/Navigation.module.scss";
+import NavItemDots from "../../assets/horDots.svg";
 
 export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
   const { pathname } = useRouter();
   return (
-    <nav {...props}>
-      {sections.map(({ id, sectionName }) => {
+    <nav className={styles.nav} {...props}>
+      {pages.map(({ id, page, path }: Page, idx: number): JSX.Element => {
         return (
-          <Link key={id} href={`#${id}`}>
-            <a className={pathname === id ? styles.active : ""}>
-              {sectionName}
-            </a>
+          <Link key={id} href={`#${path}`}>
+            <>
+              <a
+                className={cn(
+                  styles.navItem,
+                  pathname === path ? styles.active : undefined
+                )}
+              >
+                {page}
+              </a>
+              {idx !== pages.length - 1 ? (
+                <NavItemDots className={styles.dots} />
+              ) : (
+                <></>
+              )}
+            </>
           </Link>
         );
       })}

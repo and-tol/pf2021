@@ -23,10 +23,11 @@
     "**/*.ts",
     "**/*.tsx",
     "declaration.d.ts",
-    "image.d.ts"
+    "images.d.ts",
+    "next-env-custom.d.ts"
+    // "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "next-env.d.ts"
   ]
 }

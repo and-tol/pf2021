@@ -12,22 +12,24 @@ module.exports = {
   },
 };
 
-// Ability to use svg as components for new NextJS
+// Ability to use svg as components
 module.exports = {
   webpack(config) {
     config.module.rules.push({
-      loader: "@svgr/webpack",
-      options: {
-        prettier: false,
-        svgo: true,
-        svgoConfig: {
-          plugins: [{ removeViewBox: false }],
+      test: /\.svg$/i,
+      issuer: { and: [/\.(js|ts|md)x?$/] },
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            prettier: false,
+            svgo: true,
+            svgoConfig: { plugins: [{ removeViewBox: false }] },
+            titleProp: true,
+          },
         },
-        titleProp: true,
-      },
-      test: /\.svg$/,
+      ],
     });
-
     return config;
   },
 };

@@ -1,0 +1,31 @@
+.hero {
+  display: flex;
+
+  padding-top: 205px;
+}
+
+.heroContent {
+  z-index: 1;
+
+  min-width: 65%;
+}
+
+.heroTitle {
+  margin-bottom: 3.5rem;
+}
+
+.heroDecorate {
+  position: relative;
+  top: -140px;
+  right: 308px;
+
+  overflow: inherit;
+
+  svg {
+    max-height: 80vh;
+  }
+}
+
+.heroText {
+  margin-bottom: 2rem;
+}
