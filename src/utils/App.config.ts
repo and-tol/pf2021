@@ -55,11 +55,11 @@ export const pages: Page[] = [
   {
     id: IndexPagesId.Projects,
     page: "Projects",
-    path: `/#${IndexPagesId.Projects}`,
+    path: `/${IndexPagesId.Projects}`,
   },
   {
     id: IndexPagesId.Contacts,
     page: "Contacts",
-    path: `/#${IndexPagesId.Contacts}`,
+    path: `/${IndexPagesId.Contacts}`,
   },
 ];
