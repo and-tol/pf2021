@@ -18,9 +18,9 @@ const Error = (): JSX.Element => {
 
   return (
     <div className="wrapper">
-      {/* <Head>
+      <Head>
         <title>Error</title>
-      </Head> */}
+      </Head>
       <div>
         <h1>404</h1>
         <h2>Something is going wrong...</h2>
