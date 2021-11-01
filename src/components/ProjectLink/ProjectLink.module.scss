@@ -1,0 +1,60 @@
+@import "../../styles/design-tokens.scss";
+
+.name {
+  letter-spacing: 0.02em;
+
+  font-family: Noto serif, serif;
+  font-size: 3rem;
+  line-height: 100%;
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+
+  transition: all 0.5s ease;
+}
+
+.image {
+  position: relative;
+  top: -50px;
+  right: -80px;
+
+  transition: all 1s ease;
+
+  opacity: 0;
+}
+
+.link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 7.25rem;
+  padding-left: 6.875rem;
+
+  & + .link {
+    border-top: 1px solid $white;
+  }
+
+  &:hover .name {
+    color: $orange;
+  }
+
+  &:hover .icon {
+    transition: all 0.5s ease;
+    transform: rotate3d(0, 0, 1, 46deg);
+    fill: $orange;
+  }
+
+  &:hover .image {
+    top: 0;
+    right: 0;
+
+    transition: all 0.5s ease;
+
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Hero } from "../components";
+import { Heading, Projects } from "../components";
 import { Layout } from "../layout/Layout";
 import { AppConfig } from "../utils/App.config";
 
@@ -10,6 +10,8 @@ export default function Index(): JSX.Element {
       <Head>
         <title> {AppConfig.title} | Projects</title>
       </Head>
+
+      <Projects />
     </Layout>
   );
 }

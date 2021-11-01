@@ -13,7 +13,6 @@ export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
   return (
     <nav className={styles.nav} {...props}>
       {pages.map(({ id, page, path }: Page, idx: number): JSX.Element => {
-        console.log(path);
         return (
           <React.Fragment>
             <Link key={id} href={path}>
