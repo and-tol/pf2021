@@ -5,16 +5,19 @@ import styles from "./ProjectLink.module.scss";
 import ArrowIcon from "./arrow.svg";
 import { ProjectLinkProps } from "./ProjectLink.props";
 
-export const ProjectLink = ({ ...props }: ProjectLinkProps): JSX.Element => {
+export const ProjectLink = ({
+  project,
+  ...props
+}: ProjectLinkProps): JSX.Element => {
   return (
     <>
       <Link href="">
         <a className={styles.link} {...props}>
-          <span className={styles.name}>Артём-Пица</span>
+          <span className={styles.name}>{project.name}</span>
           <ArrowIcon className={styles.icon} />
           <div className={styles.image}>
             <Image
-              src="/assets/images/artem-pizza.png"
+              src={`/assets/images/${project.imageSmall}`}
               width="170"
               height="170"
               layout="intrinsic"
