@@ -5,3 +5,5 @@ export * from "./LanguagesNav/LanguagesNav";
 export * from "./Logo/Logo";
 export * from "./Navigation/Navigation";
 export * from "./P/P";
+export * from "./Projects/Projects";
+export * from "./ProjectLink/ProjectLink";

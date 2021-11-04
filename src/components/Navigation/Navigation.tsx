@@ -1,5 +1,6 @@
-import { useRouter } from "next/router";
+import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import cn from "classnames";
 import { Page, pages } from "../../utils/App.config";
 import { NavigationProps } from "./Navigation.props";
@@ -8,12 +9,13 @@ import NavItemDots from "../../assets/horDots.svg";
 
 export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
   const { pathname } = useRouter();
+
   return (
     <nav className={styles.nav} {...props}>
       {pages.map(({ id, page, path }: Page, idx: number): JSX.Element => {
         return (
-          <Link key={id} href={`#${path}`}>
-            <>
+          <React.Fragment>
+            <Link key={id} href={path}>
               <a
                 className={cn(
                   styles.navItem,
@@ -22,13 +24,13 @@ export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
               >
                 {page}
               </a>
-              {idx !== pages.length - 1 ? (
-                <NavItemDots className={styles.dots} />
-              ) : (
-                <></>
-              )}
-            </>
-          </Link>
+            </Link>
+            {idx !== pages.length - 1 ? (
+              <NavItemDots className={styles.dots} />
+            ) : (
+              <></>
+            )}
+          </React.Fragment>
         );
       })}
     </nav>

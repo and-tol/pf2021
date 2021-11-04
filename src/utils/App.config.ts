@@ -3,15 +3,14 @@ import { appLanguages } from "./Locale.config";
 export const AppConfig = {
   site_name: "Portfolio",
   title: "Andrey Tolstoy",
-  description:
-    "Starter code for my Nextjs Boilerplate Landing Page with Module CSS",
+  description: "Projects an CV",
   locale: appLanguages.eng.lang,
   keywords: "",
 };
 
 export enum IndexSectionsId {
   About = "about",
-  Works = "works",
+  Projects = "projects",
   Contacts = "contacts",
 }
 export interface Section {
@@ -27,9 +26,9 @@ export const sections: Section[] = [
     path: `/#${IndexSectionsId.About}`,
   },
   {
-    id: IndexSectionsId.Works,
-    sectionName: "Works",
-    path: `/#${IndexSectionsId.Works}`,
+    id: IndexSectionsId.Projects,
+    sectionName: "Projects",
+    path: `/#${IndexSectionsId.Projects}`,
   },
   {
     id: IndexSectionsId.Contacts,
@@ -39,7 +38,7 @@ export const sections: Section[] = [
 ];
 export enum IndexPagesId {
   About = "about",
-  Works = "works",
+  Projects = "projects",
   Contacts = "contacts",
 }
 export interface Page {
@@ -54,13 +53,13 @@ export const pages: Page[] = [
     path: `/`,
   },
   {
-    id: IndexPagesId.Works,
-    page: "Works",
-    path: `/#${IndexPagesId.Works}`,
+    id: IndexPagesId.Projects,
+    page: "Projects",
+    path: `/${IndexPagesId.Projects}`,
   },
   {
     id: IndexPagesId.Contacts,
     page: "Contacts",
-    path: `/#${IndexPagesId.Contacts}`,
+    path: `/${IndexPagesId.Contacts}`,
   },
 ];
