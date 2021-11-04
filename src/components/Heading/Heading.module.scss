@@ -12,14 +12,12 @@
 .h2 {
   /* identical to box height, or 158% */
 
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem;
   text-transform: uppercase;
 
-  color: #FFF;
-
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 19px;
+  line-height: 1.1875rem;
 }
 .h3 {
   letter-spacing: 0.2em;
@@ -30,4 +28,12 @@
   font-weight: 400;
   font-style: normal;
   line-height: 160%;
+}
+.h4 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
 }

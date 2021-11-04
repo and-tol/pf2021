@@ -3,6 +3,7 @@ import { HeadingProps } from "./Heading.props";
 import styles from "./Heading.module.scss";
 
 export const Heading = ({
+  className,
   tag,
   children,
   ...props
@@ -12,14 +13,30 @@ export const Heading = ({
     case "h1":
     case "h2":
       return (
-        <Tag className={cn(styles[tag], "font-primary-color")} {...props}>
+        <Tag
+          className={cn(styles.h2, "font-primary-color", className)}
+          {...props}
+        >
           {children}
         </Tag>
       );
 
     case "h3":
       return (
-        <Tag className={cn(styles[tag], "font-third-color")} {...props}>
+        <Tag
+          className={cn(styles.h3, "font-third-color", className)}
+          {...props}
+        >
+          {children}
+        </Tag>
+      );
+
+    case "h4":
+      return (
+        <Tag
+          className={cn(styles.h4, "font-third-color", className)}
+          {...props}
+        >
           {children}
         </Tag>
       );

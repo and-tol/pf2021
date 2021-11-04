@@ -1,6 +1,8 @@
 @import "../../styles/design-tokens.scss";
 
 .name {
+  z-index: 1;
+
   letter-spacing: 0.02em;
 
   font-family: Noto serif, serif;
@@ -9,14 +11,13 @@
 }
 
 .icon {
-  position: absolute;
-  left: 50%;
+  z-index: 1;
 
   transition: all 0.5s ease;
 }
 
 .image {
-  position: relative;
+  position: absolute;
   top: -50px;
   right: -80px;
 
@@ -50,8 +51,8 @@
   }
 
   &:hover .image {
-    top: 0;
-    right: 0;
+    top: -22px;
+    right: 93px;
 
     transition: all 0.5s ease;
 
