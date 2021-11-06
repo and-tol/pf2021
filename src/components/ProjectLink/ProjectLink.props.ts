@@ -1,10 +1,10 @@
 import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
-import { Project } from "../../interfaces";
+import { IProject } from "../../interfaces";
 
 export interface ProjectLinkProps
   extends DetailedHTMLProps<
     AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  project: Project;
+  project: IProject;
 }

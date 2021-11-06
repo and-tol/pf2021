@@ -37,7 +37,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               React ecosystem.
             </P>
           </div>
-          <Button className="font-primary-color" appearance="primary">
+          <Button className={cn("font-primary-color", "btn-bg-primary")}>
             Download CV
           </Button>
         </article>

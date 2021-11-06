@@ -7,3 +7,4 @@ export * from "./Navigation/Navigation";
 export * from "./P/P";
 export * from "./Projects/Projects";
 export * from "./ProjectLink/ProjectLink";
+export * from "./Project/Project";

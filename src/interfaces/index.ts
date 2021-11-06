@@ -1,4 +1,4 @@
-export interface Project {
+export interface IProject {
   _id: string;
   name: string;
   alias: string;
@@ -8,4 +8,5 @@ export interface Project {
   image: string;
   technologies: string[];
   description: string;
+  message?: string;
 }

@@ -14,8 +14,8 @@ export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
     <nav className={styles.nav} {...props}>
       {pages.map(({ id, page, path }: Page, idx: number): JSX.Element => {
         return (
-          <React.Fragment>
-            <Link key={id} href={path}>
+          <React.Fragment key={id}>
+            <Link href={path}>
               <a
                 className={cn(
                   styles.navItem,
