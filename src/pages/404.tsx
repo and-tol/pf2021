@@ -7,14 +7,14 @@ import Head from "next/head";
 const Error = (): JSX.Element => {
   const router = useRouter();
 
-  useEffect(() => {
-    let timerId = setTimeout(() => {
-      router.push("/");
-    }, 2000);
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [router]);
+  // useEffect(() => {
+  //   let timerId = setTimeout(() => {
+  //     router.push("/");
+  //   }, 2000);
+  //   return () => {
+  //     clearTimeout(timerId);
+  //   };
+  // }, [router]);
 
   return (
     <div className="wrapper">
