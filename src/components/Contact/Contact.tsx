@@ -1,12 +1,15 @@
 import cn from "classnames";
 import React from "react";
 import { Heading, P } from "..";
-import styles from "./Contact.module.scss";
+// import styles from './Contact.module.scss';
 import { ContactProps } from "./Contact.props";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAdobe } from '@fortawesome/free-regular-svg-icons';
 
 export const Contact = ({ ...props }: ContactProps): JSX.Element => {
   return (
-    <main className={cn("wrapper", styles.section)} {...props}>
+    <main className={cn("wrapper")} {...props}>
       <Heading tag="h4" className="pb-1">
         Contact
       </Heading>
@@ -40,7 +43,13 @@ export const Contact = ({ ...props }: ContactProps): JSX.Element => {
           </form>
           <div>
             <h4>Follow</h4>
-            <div></div>
+            <ul>
+              <li>
+                <a href="#">
+                  <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

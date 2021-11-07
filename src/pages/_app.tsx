@@ -4,6 +4,14 @@ import type { AppProps } from "next/app";
 import "../styles/globals.scss";
 import { Meta } from "../layout";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/solid";
+import "@fortawesome/fontawesome-free/js/regular";
+import "@fortawesome/fontawesome-free/js/brands";
+config.autoAddCss = false;
+
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
