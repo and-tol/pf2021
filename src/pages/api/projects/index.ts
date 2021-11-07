@@ -7,8 +7,6 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<IProject[]>
 ) {
-  console.log("request method >>>>", req.method);
-
   if (req.method === "GET") {
     res.status(200).json(projects);
   }

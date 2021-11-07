@@ -1,10 +1,10 @@
-import React from "react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
+import React from "react";
 import { Projects } from "../../components";
+import { IProject } from "../../interfaces";
 import { Layout } from "../../layout/Layout";
 import { AppConfig } from "../../utils/App.config";
-import { GetStaticProps } from "next";
-import { IProject } from "../../interfaces";
 
 export default function Index({ projects }: ProjectsProps): JSX.Element {
   return (
