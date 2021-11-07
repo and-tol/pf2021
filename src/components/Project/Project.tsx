@@ -6,16 +6,6 @@ import LineDots from "./line-dots.svg";
 import styles from "./Project.module.scss";
 import { ProjectProps } from "./Project.props";
 
-{
-  /* <Image
-  src={`/assets/images/${project.imageSmall}`}
-  width='180'
-  height='180'
-  layout='intrinsic'
-  className={styles.image}
-/>; */
-}
-
 export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
   if (!project) {
     return (
@@ -36,8 +26,8 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
           <Image
             src={`${path}${image}`}
             sizes="50vw"
-            object-fit="contain"
-            objectFit="cover"
+            width="450"
+            objectFit="contain"
             objectPosition="left top"
             layout="fill"
           />

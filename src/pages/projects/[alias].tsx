@@ -23,7 +23,6 @@ export default function ProjectAlias({
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const alias = context.params;
   const response = await fetch(
     `${process.env.API_HOST}/projects/${context.params?.alias}`
   );
