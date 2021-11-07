@@ -6,7 +6,7 @@ import { IProject } from "../../interfaces";
 import { Layout } from "../../layout/Layout";
 import { AppConfig } from "../../utils/App.config";
 
-export default function Index({ projects }: ProjectsProps): JSX.Element {
+export default function ProjectsPage({ projects }: ProjectsProps): JSX.Element {
   return (
     <Layout>
       <Head>
