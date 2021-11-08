@@ -1,7 +1,10 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { Socials } from "../../interfaces/socials.interface";
 
-export interface ContactProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface SocialsProps
+  extends DetailedHTMLProps<
+    HTMLAttributes<HTMLUListElement>,
+    HTMLUListElement
+  > {
   socials?: Socials[];
 }

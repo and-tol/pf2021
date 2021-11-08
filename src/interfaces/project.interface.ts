@@ -1,7 +1,12 @@
 export interface IProject {
   _id: string;
   name: string;
-  slug: string;
+  alias: string;
   path: string;
-  imageName: string;
+  url: string;
+  imageSmall: string;
+  image: string;
+  technologies: string[];
+  description: string;
+  message?: string;
 }

@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React from "react";
 import { Project } from "../../components";
-import { IProject } from "../../interfaces";
+import { IProject } from "../../interfaces/project.interface";
 import { Layout } from "../../layout/Layout";
 import { AppConfig } from "../../utils/App.config";
 

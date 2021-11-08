@@ -4,10 +4,9 @@ import { Heading, P } from "..";
 // import styles from './Contact.module.scss';
 import { ContactProps } from "./Contact.props";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAdobe } from '@fortawesome/free-regular-svg-icons';
+import { Socials } from "../Socials/Socials";
 
-export const Contact = ({ ...props }: ContactProps): JSX.Element => {
+export const Contact = ({ socials, ...props }: ContactProps): JSX.Element => {
   return (
     <main className={cn("wrapper")} {...props}>
       <Heading tag="h4" className="pb-1">
@@ -43,13 +42,7 @@ export const Contact = ({ ...props }: ContactProps): JSX.Element => {
           </form>
           <div>
             <h4>Follow</h4>
-            <ul>
-              <li>
-                <a href="#">
-                  <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
-                </a>
-              </li>
-            </ul>
+            <Socials socials={socials} />
           </div>
         </div>
       </section>

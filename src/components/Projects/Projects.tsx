@@ -1,7 +1,7 @@
 import cn from "classnames";
 import React from "react";
 import { Heading, ProjectLink } from "..";
-import { IProject } from "../../interfaces";
+import { IProject } from "../../interfaces/project.interface";
 import styles from "./Projects.module.scss";
 import { ProjectsProps } from "./Projects.props";
 
