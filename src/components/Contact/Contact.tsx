@@ -7,6 +7,7 @@ import { ContactProps } from "./Contact.props";
 import { Socials } from "../Socials/Socials";
 
 export const Contact = ({ socials, ...props }: ContactProps): JSX.Element => {
+  console.log("socials >>>", socials);
   return (
     <main className={cn("wrapper")} {...props}>
       <Heading tag="h4" className="pb-1">
