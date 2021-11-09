@@ -1,5 +1,11 @@
 @import "../../styles/design-tokens.scss";
 
+.pageContacts {
+  top: 50vh;
+
+  transform: translateY(-76%);
+}
+
 .section {
   display: flex;
 }
@@ -23,4 +29,11 @@
 
 .contacts {
   flex-grow: 1;
+}
+
+.socialsContainer {
+  margin-top: 74px;
+}
+.socialsTitle {
+  margin-bottom: 18px;
 }

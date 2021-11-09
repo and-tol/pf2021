@@ -1,19 +1,12 @@
 import cn from "classnames";
 import React from "react";
-import { Heading, P } from "..";
-import styles from "./Contact.module.scss";
+import { Form, Heading, P, Socials } from "..";
 import { ContactProps } from "./Contact.props";
+import styles from "./Contact.module.scss";
 
-import { Socials } from "../Socials/Socials";
-import { Form } from "../Form/Form";
-
-export const Contact = ({
-  socials,
-  className,
-  ...props
-}: ContactProps): JSX.Element => {
+export const Contact = ({ socials, ...props }: ContactProps): JSX.Element => {
   return (
-    <main className={cn("wrapper", className)} {...props}>
+    <section className={cn("wrapper", styles.pageContacts)} {...props}>
       <Heading tag="h4" className="pb-1">
         Contact
       </Heading>
@@ -28,12 +21,12 @@ export const Contact = ({
         </div>
         <div className={styles.contacts}>
           <Form />
-          <div>
-            <h4>Follow</h4>
+          <div className={styles.socialsContainer}>
+            <h4 className={cn("formTitle", styles.socialsTitle)}>Follow</h4>
             <Socials socials={socials} />
           </div>
         </div>
       </section>
-    </main>
+    </section>
   );
 };
