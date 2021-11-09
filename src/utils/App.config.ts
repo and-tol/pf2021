@@ -11,7 +11,7 @@ export const AppConfig = {
 export enum IndexSectionsId {
   About = "about",
   Projects = "projects",
-  Contacts = "contacts",
+  Contact = "contact",
 }
 export interface Section {
   id: string;
@@ -31,15 +31,15 @@ export const sections: Section[] = [
     path: `/#${IndexSectionsId.Projects}`,
   },
   {
-    id: IndexSectionsId.Contacts,
-    sectionName: "Contacts",
-    path: `/#${IndexSectionsId.Contacts}`,
+    id: IndexSectionsId.Contact,
+    sectionName: "Contact",
+    path: `/#${IndexSectionsId.Contact}`,
   },
 ];
 export enum IndexPagesId {
   About = "about",
   Projects = "projects",
-  Contacts = "contacts",
+  Contact = "contact",
 }
 export interface Page {
   id: string;
@@ -58,8 +58,8 @@ export const pages: Page[] = [
     path: `/${IndexPagesId.Projects}`,
   },
   {
-    id: IndexPagesId.Contacts,
-    page: "Contacts",
-    path: `/${IndexPagesId.Contacts}`,
+    id: IndexPagesId.Contact,
+    page: "Contact",
+    path: `/${IndexPagesId.Contact}`,
   },
 ];

@@ -14,7 +14,7 @@ export const Heading = ({
     case "h2":
       return (
         <Tag
-          className={cn(styles.h2, "font-primary-color", className)}
+          className={cn(styles.h1, "font-primary-color", className)}
           {...props}
         >
           {children}

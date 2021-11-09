@@ -1,0 +1,39 @@
+@import "../../styles/design-tokens.scss";
+
+.pageContacts {
+  top: 50vh;
+
+  transform: translateY(-76%);
+}
+
+.section {
+  display: flex;
+}
+.info {
+  flex-basis: 468px;
+}
+.infoTitle {
+  // text-shadow: -1px 0 $middle-blue, 0 1px $middle-blue, 1px 0 $middle-blue, 0 -1px $middle-blue;
+
+  margin-bottom: 1.35rem;
+
+  color: $white;
+
+  font-family: Lora, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 100%;
+
+  -webkit-text-stroke: 1px $middle-blue;
+}
+
+.contacts {
+  flex-grow: 1;
+}
+
+.socialsContainer {
+  margin-top: 74px;
+}
+.socialsTitle {
+  margin-bottom: 18px;
+}

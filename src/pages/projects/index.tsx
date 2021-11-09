@@ -2,13 +2,13 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
 import { Projects } from "../../components";
-import { IProject } from "../../interfaces";
+import { IProject } from "../../interfaces/project.interface";
 import { Layout } from "../../layout/Layout";
 import { AppConfig } from "../../utils/App.config";
 
-export default function Index({ projects }: ProjectsProps): JSX.Element {
+export default function ProjectsPage({ projects }: ProjectsProps): JSX.Element {
   return (
-    <Layout>
+    <Layout className="bg-primary">
       <Head>
         <title> {AppConfig.title} | Projects</title>
       </Head>

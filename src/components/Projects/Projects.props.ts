@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { Project } from "../../interfaces";
+import { IProject } from "../../interfaces/project.interface";
 
 export interface ProjectsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
-  projects: Project[];
+  projects: IProject[];
 }
