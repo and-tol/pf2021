@@ -30,10 +30,11 @@
 
   border-bottom: 2px solid $middle-blue;
 
-  outline-style: dotted;
-  outline-color: $light-blue;
-
   font-size: 1.5rem;
+  &:focus {
+    outline-style: dotted;
+    outline-color: $light-blue;
+  }
 }
 .text {
   grid-column: start / end;
