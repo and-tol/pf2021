@@ -1,17 +1,19 @@
-import React, { PropsWithChildren } from "react";
 import cn from "classnames";
-import { LayoutProps } from "./Layout.props";
-import { Header, Footer } from ".";
+import React, { PropsWithChildren } from "react";
+import { Footer, Header } from ".";
 import styles from "./Layout.module.css";
+import { LayoutProps } from "./Layout.props";
 
 export const Layout = ({
   children,
+  className = "bg-primary",
+  ...props
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
   return (
-    <div className={styles.contentContainer}>
-      <Header />
-      <main className={cn("bg-primary", styles.main)}>{children}</main>
-      <Footer />
+    <div className={cn(styles.contentContainer, className)} {...props}>
+      <Header className={className} />
+      <main className={cn(styles.main, className)}>{children}</main>
+      <Footer className={className} />
     </div>
   );
 };

@@ -10,7 +10,7 @@ export default function ContactPage({
   socials,
 }: ContactPageProps): JSX.Element {
   return (
-    <Layout>
+    <Layout className="bg-secondary font-secondary-color">
       <Head>
         <title> {AppConfig.title} | Contact</title>
       </Head>

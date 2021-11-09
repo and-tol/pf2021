@@ -4,7 +4,7 @@ export const socials: Socials[] = [
   {
     id: 1,
     name: "Linkedin",
-    icon: "linkedin",
+    icon: "linkedin-in",
     path: "https://www.linkedin.com/in/andrey-tolstoy-18837027/",
   },
   {

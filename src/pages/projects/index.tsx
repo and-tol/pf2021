@@ -8,7 +8,7 @@ import { AppConfig } from "../../utils/App.config";
 
 export default function ProjectsPage({ projects }: ProjectsProps): JSX.Element {
   return (
-    <Layout>
+    <Layout className="bg-primary">
       <Head>
         <title> {AppConfig.title} | Projects</title>
       </Head>

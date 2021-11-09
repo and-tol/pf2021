@@ -1,11 +1,10 @@
 import cn from "classnames";
-import { PProps } from "./P.props";
 import styles from "./P.module.scss";
-import classNames from "classnames";
+import { PProps } from "./P.props";
 
-export const P = ({ children, ...props }: PProps): JSX.Element => {
+export const P = ({ children, className, ...props }: PProps): JSX.Element => {
   return (
-    <p className={cn("font-primary-color", styles.p, classNames)} {...props}>
+    <p className={cn(styles.p, className)} {...props}>
       {children}
     </p>
   );

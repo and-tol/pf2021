@@ -13,7 +13,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
             <Heading tag="h1">Andrey Tolstoy</Heading>
             <Heading tag="h3">Frontend developer</Heading>
           </div>
-          <div className={styles.heroText}>
+          <div className={cn(styles.heroText, "font-primary-color")}>
             <P>
               I started as a graphic designer. I did the design and layout of
               booklets, flyers, packages.

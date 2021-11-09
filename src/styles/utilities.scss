@@ -21,10 +21,18 @@
   letter-spacing: 0.05em;
 
   border: none;
-  border-radius: 1rem;
+  border-radius: 2rem;
 
   font-size: 0.8rem;
 
   font-weight: 600;
   line-height: 1.1875rem;
+}
+
+.formTitle {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+
+  font-size: 0.825rem;
+  line-height: 1.325rem;
 }
