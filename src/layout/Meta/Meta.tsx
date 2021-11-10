@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { AppConfig } from "../../utils/App.config";
+import Head from 'next/head';
+import { AppConfig } from '../../utils/App.config';
 
 export const Meta = () => {
   return (

@@ -1,9 +1,9 @@
-import cn from "classnames";
-import { useRouter } from "next/router";
-import React, { PropsWithChildren, useEffect, useState } from "react";
-import { Footer, Header } from ".";
-import styles from "./Layout.module.css";
-import { LayoutProps, FooterAppearance } from "./Layout.props";
+import cn from 'classnames';
+import { useRouter } from 'next/router';
+import React, { PropsWithChildren, useEffect, useState } from 'react';
+import { Footer, Header } from '.';
+import styles from './Layout.module.css';
+import { LayoutProps, FooterAppearance } from './Layout.props';
 
 export const Layout = ({
   children,
@@ -12,11 +12,11 @@ export const Layout = ({
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
   const router = useRouter();
   const [footerAppearance, setFooterAppearance] =
-    useState<FooterAppearance>("primary");
+    useState<FooterAppearance>('primary');
 
   useEffect(() => {
-    if (router.pathname.slice(1) === "contact") {
-      setFooterAppearance("white");
+    if (router.pathname.slice(1) === 'contact') {
+      setFooterAppearance('white');
     }
   }, [router.pathname]);
 

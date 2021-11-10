@@ -1,16 +1,16 @@
 // Localization
 // export const AppLanguages: string[] = ['eng', 'rus', 'lat'];
 export enum Languages {
-  Eng = "eng",
-  Rus = "rus",
+  Eng = 'eng',
+  Rus = 'rus',
 }
 
 export enum LanguagesKeys {
-  Lang = "lang",
-  Path = "path",
+  Lang = 'lang',
+  Path = 'path',
 }
 export enum Path {
-  Root = "/",
+  Root = '/',
 }
 
 export interface AppLanguage {

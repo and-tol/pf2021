@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import ArrowIcon from "./arrow.svg";
-import styles from "./ProjectLink.module.scss";
-import { ProjectLinkProps } from "./ProjectLink.props";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import ArrowIcon from './arrow.svg';
+import styles from './ProjectLink.module.scss';
+import { ProjectLinkProps } from './ProjectLink.props';
 
 export const ProjectLink = ({
   project,

@@ -1,12 +1,12 @@
-import { FormProps } from "./Form.props";
-import cn from "classnames";
-import styles from "./Form.module.scss";
-import { Button } from "..";
+import { FormProps } from './Form.props';
+import cn from 'classnames';
+import styles from './Form.module.scss';
+import { Button } from '..';
 
 export const Form = ({ ...props }: FormProps): JSX.Element => {
   return (
     <form name="form" {...props} className={styles.form}>
-      <h4 className={cn(styles.title, "formTitle")}>Email</h4>
+      <h4 className={cn(styles.title, 'formTitle')}>Email</h4>
       <div>
         <label htmlFor="name" className={styles.label}>
           Your Name

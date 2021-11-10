@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { AppConfig } from "../../utils/App.config";
-import { LogoProps } from "./Logo.props";
+import Link from 'next/link';
+import { AppConfig } from '../../utils/App.config';
+import { LogoProps } from './Logo.props';
 
 export const Logo = (props: LogoProps): JSX.Element => {
   return (

@@ -1,6 +1,6 @@
-import cn from "classnames";
-import { ButtonProps } from "./Button.props";
-import styles from "./Button.module.scss";
+import cn from 'classnames';
+import { ButtonProps } from './Button.props';
+import styles from './Button.module.scss';
 
 export const Button = ({
   children,
@@ -10,9 +10,9 @@ export const Button = ({
 }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={cn("button", className, {
-        "btn-bg-primary": appearance === "primary",
-        [styles.ghost]: appearance === "ghost",
+      className={cn('button', className, {
+        'btn-bg-primary': appearance === 'primary',
+        [styles.ghost]: appearance === 'ghost',
       })}
       {...props}
     >

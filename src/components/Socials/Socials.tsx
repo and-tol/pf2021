@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import styles from "./Socials.module.scss";
-import { SocialsProps } from "./Socials.props";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import styles from './Socials.module.scss';
+import { SocialsProps } from './Socials.props';
 
 export const Socials = ({ socials, ...props }: SocialsProps): JSX.Element => {
   return (
@@ -11,7 +11,7 @@ export const Socials = ({ socials, ...props }: SocialsProps): JSX.Element => {
           return (
             <li key={social._id} className={styles.icon}>
               <a href={social.path}>
-                <FontAwesomeIcon icon={["fab", social.icon]} size="lg" />
+                <FontAwesomeIcon icon={['fab', social.icon]} size="lg" />
               </a>
             </li>
           );

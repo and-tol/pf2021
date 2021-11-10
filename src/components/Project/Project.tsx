@@ -1,10 +1,10 @@
-import cn from "classnames";
-import Image from "next/image";
-import React from "react";
-import { Heading, P } from "..";
-import LineDots from "./line-dots.svg";
-import styles from "./Project.module.scss";
-import { ProjectProps } from "./Project.props";
+import cn from 'classnames';
+import Image from 'next/image';
+import React from 'react';
+import { Heading, P } from '..';
+import LineDots from './line-dots.svg';
+import styles from './Project.module.scss';
+import { ProjectProps } from './Project.props';
 
 export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
   if (!project) {
@@ -17,7 +17,7 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
   const { name, path, url, image, technologies, description } = project;
 
   return (
-    <section className={cn("wrapper", styles.section)} {...props}>
+    <section className={cn('wrapper', styles.section)} {...props}>
       <Heading tag="h4" className="pb-1">
         Project
       </Heading>
@@ -49,7 +49,7 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
           <P className="mt-1">{description}</P>
           <a
             href={url}
-            className={cn("button", "btn-bg-primary", "mt-2")}
+            className={cn('button', 'btn-bg-primary', 'mt-2')}
             target="_blank"
           >
             Open Project

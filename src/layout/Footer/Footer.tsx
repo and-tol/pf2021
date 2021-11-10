@@ -1,11 +1,11 @@
-import React from "react";
-import cn from "classnames";
-import { FooterProps } from "./Footer.props";
-import { Navigation } from "../../components";
-import styles from "./Footer.module.scss";
+import React from 'react';
+import cn from 'classnames';
+import { FooterProps } from './Footer.props';
+import { Navigation } from '../../components';
+import styles from './Footer.module.scss';
 
 export const Footer = ({
-  appearance = "primary",
+  appearance = 'primary',
   className,
   ...props
 }: FooterProps): JSX.Element => {
@@ -16,8 +16,8 @@ export const Footer = ({
       </div>
       <div
         className={cn(styles.hidingBlock, className, {
-          [styles.primary]: appearance === "primary",
-          [styles.white]: appearance === "white",
+          [styles.primary]: appearance === 'primary',
+          [styles.white]: appearance === 'white',
         })}
       ></div>
     </footer>

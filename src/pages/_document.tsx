@@ -5,8 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
   DocumentInitialProps,
-} from "next/document";
-import { AppConfig } from "../utils/App.config";
+} from 'next/document';
+import { AppConfig } from '../utils/App.config';
 
 // Need to create a custom _document because i18n support is not compatible with `next export`.
 class MyDocument extends Document {

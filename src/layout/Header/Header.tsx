@@ -1,7 +1,7 @@
-import React from "react";
-import { LanguagesNav } from "../../components";
-import { appLanguages } from "../../utils/Locale.config";
-import { HeaderProps } from "./Header.props";
+import React from 'react';
+import { LanguagesNav } from '../../components';
+import { appLanguages } from '../../utils/Locale.config';
+import { HeaderProps } from './Header.props';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   return (

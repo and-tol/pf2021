@@ -1,10 +1,10 @@
-import { GetStaticProps } from "next";
-import Head from "next/head";
-import React from "react";
-import { Contacts } from "../components";
-import { Socials } from "../interfaces/socials.interface";
-import { Layout } from "../layout/Layout";
-import { AppConfig } from "../utils/App.config";
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import React from 'react';
+import { Contacts } from '../components';
+import { Socials } from '../interfaces/socials.interface';
+import { Layout } from '../layout/Layout';
+import { AppConfig } from '../utils/App.config';
 
 export default function ContactPage({
   socials,

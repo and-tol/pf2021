@@ -1,19 +1,19 @@
-import cn from "classnames";
-import React from "react";
-import { Button, Heading, P } from "..";
-import { HeroProps } from "./Hero.props";
-import styles from "./Hero.module.scss";
-import DecorateImage from "./decorate.svg";
+import cn from 'classnames';
+import React from 'react';
+import { Button, Heading, P } from '..';
+import { HeroProps } from './Hero.props';
+import styles from './Hero.module.scss';
+import DecorateImage from './decorate.svg';
 export const Hero = ({ ...props }: HeroProps): JSX.Element => {
   return (
     <>
-      <div className={cn("wrapper", styles.hero)} {...props}>
+      <div className={cn('wrapper', styles.hero)} {...props}>
         <article className={styles.heroContent}>
           <div className={styles.heroTitle}>
             <Heading tag="h1">Andrey Tolstoy</Heading>
             <Heading tag="h3">Frontend developer</Heading>
           </div>
-          <div className={cn(styles.heroText, "font-primary-color")}>
+          <div className={cn(styles.heroText, 'font-primary-color')}>
             <P>
               I started as a graphic designer. I did the design and layout of
               booklets, flyers, packages.
@@ -37,7 +37,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               React ecosystem.
             </P>
           </div>
-          <Button className={cn("font-primary-color", "btn-bg-primary")}>
+          <Button className={cn('font-primary-color', 'btn-bg-primary')}>
             Download CV
           </Button>
         </article>
