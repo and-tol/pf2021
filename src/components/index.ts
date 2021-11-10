@@ -1,5 +1,5 @@
 export * from "./Button/Button";
-export * from "./Contact/Contact";
+export * from "./Contacts/Contacts";
 export * from "./Form/Form";
 export * from "./Heading/Heading";
 export * from "./Hero/Hero";

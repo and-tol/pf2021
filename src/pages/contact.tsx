@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
-import { Contact } from "../components";
+import { Contacts } from "../components";
 import { Socials } from "../interfaces/socials.interface";
 import { Layout } from "../layout/Layout";
 import { AppConfig } from "../utils/App.config";
@@ -15,7 +15,7 @@ export default function ContactPage({
         <title> {AppConfig.title} | Contact</title>
       </Head>
 
-      {/* {socials && <Contact socials={socials} />} */}
+      {socials && <Contacts socials={socials} />}
     </Layout>
   );
 }

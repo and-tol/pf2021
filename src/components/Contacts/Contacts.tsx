@@ -1,15 +1,10 @@
 import cn from "classnames";
 import React from "react";
 import { Form, Heading, P, Socials } from "..";
-import { ContactProps } from "./Contact.props";
-import styles from "./Contact.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ContactsProps } from "./Contacts.props";
+import styles from "./Contacts.module.scss";
 
-export const Contact = ({
-  socials = [],
-  ...props
-}: ContactProps): JSX.Element => {
-  console.log("socials >>>", socials);
+export const Contacts = ({ socials, ...props }: ContactsProps): JSX.Element => {
   return (
     <section className={cn("wrapper", styles.pageContacts)} {...props}>
       <Heading tag="h4" className="pb-1">
@@ -28,18 +23,10 @@ export const Contact = ({
           <Form />
           <div className={styles.socialsContainer}>
             <h4 className={cn("formTitle", styles.socialsTitle)}>Follow</h4>
-            {/* <Socials socials={socials} /> */}
-            <ul className={styles.icons}>
-              {socials?.map((social) => {
-                return (
-                  <li key={social._id} className={styles.icon}>
-                    <a href={social.path}>
-                      <FontAwesomeIcon icon={["fab", social.icon]} size="lg" />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+
+            {socials && <Socials socials={socials} />}
+
+            <ul className={styles.icons}></ul>
           </div>
         </div>
       </section>
