@@ -2,8 +2,9 @@ import cn from 'classnames';
 import { useRouter } from 'next/router';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Footer, Header } from '.';
+import { FooterAppearance } from './Footer/Footer.props';
 import styles from './Layout.module.css';
-import { LayoutProps, FooterAppearance } from './Layout.props';
+import { LayoutProps } from './Layout.props';
 
 export const Layout = ({
   children,

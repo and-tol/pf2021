@@ -2,12 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
-import { Page, pages } from '../../utils/App.config';
+import { IndexSectionsId, Page, pages } from '../../utils/App.config';
 import { NavigationProps } from './Navigation.props';
 import styles from '../../styles/Navigation.module.scss';
 import NavItemDots from '../../assets/horDots.svg';
 
-export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
+export const Navigation = ({
+  appearance,
+  ...props
+}: NavigationProps): JSX.Element => {
   const { pathname } = useRouter();
 
   return (
@@ -19,6 +22,7 @@ export const Navigation = ({ ...props }: NavigationProps): JSX.Element => {
               <a
                 className={cn(
                   styles.navItem,
+                  { [styles.secondColor]: appearance === 'white' },
                   pathname === path ? styles.active : undefined
                 )}
               >

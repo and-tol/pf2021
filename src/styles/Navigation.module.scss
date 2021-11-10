@@ -29,7 +29,7 @@ $margin-right: 1rem;
 }
 
 .active {
-  color: $orange;
+  color: $orange !important;
 
   &:hover {
     color: $orange-light;
@@ -38,4 +38,8 @@ $margin-right: 1rem;
 
 .dots {
   margin-right: $margin-right;
+}
+
+.secondColor {
+  color: $dark-blue;
 }
