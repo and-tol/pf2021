@@ -1,7 +1,30 @@
 @import '../../styles/design-tokens.scss';
 
+.primary {
+  transition: all 0.3s ease;
+
+  color: $light-blue;
+  border: 2px solid $middle-blue;
+  background-color: $middle-blue;
+  &:hover {
+    transition: all 0.3s ease;
+
+    color: $white;
+    background-color: $dark-blue;
+  }
+}
+
 .ghost {
+  transition: all 0.3s ease;
+
   color: $turquoise;
   border: 2px solid $turquoise;
   background-color: transparent;
+
+  &:hover {
+    transition: all 0.3s ease;
+
+    color: $white;
+    background-color: $turquoise;
+  }
 }
