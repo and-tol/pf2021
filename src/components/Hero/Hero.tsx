@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import React from 'react';
 import { Button, Heading, P } from '..';
-import { HeroProps } from './Hero.props';
-import styles from './Hero.module.scss';
 import DecorateImage from './decorate.svg';
+import styles from './Hero.module.scss';
+import { HeroProps } from './Hero.props';
 export const Hero = ({ ...props }: HeroProps): JSX.Element => {
   return (
     <>
@@ -37,9 +37,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               React ecosystem.
             </P>
           </div>
-          <Button className={cn('font-primary-color', 'btn-bg-primary')}>
-            Download CV
-          </Button>
+          <Button appearance="primary">Download CV</Button>
         </article>
         <div className={styles.heroDecorate}>
           <DecorateImage />

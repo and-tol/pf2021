@@ -11,7 +11,7 @@ export const Button = ({
   return (
     <button
       className={cn('button', className, {
-        'btn-bg-primary': appearance === 'primary',
+        [styles.primary]: appearance === 'primary',
         [styles.ghost]: appearance === 'ghost',
       })}
       {...props}
