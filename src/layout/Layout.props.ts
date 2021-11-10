@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { FooterAppearance } from './Footer/Footer.props';
 
 export interface LayoutProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -6,5 +7,3 @@ export interface LayoutProps
   bgColor?: string;
   footerAppearance?: FooterAppearance;
 }
-
-export type FooterAppearance = 'primary' | 'white';

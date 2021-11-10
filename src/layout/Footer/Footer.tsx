@@ -12,7 +12,7 @@ export const Footer = ({
   return (
     <footer className={cn(styles.footer, className)} {...props}>
       <div className="wrapper">
-        <Navigation />
+        <Navigation appearance={appearance} />
       </div>
       <div
         className={cn(styles.hidingBlock, className, {
