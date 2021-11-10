@@ -37,3 +37,17 @@
 .socialsTitle {
   margin-bottom: 18px;
 }
+
+.icon {
+  display: inline-block;
+
+  margin-right: 1.75rem;
+
+  transition: color 0.4s ease;
+
+  &:hover {
+    transition: color 0.4s ease;
+
+    color: $orange;
+  }
+}

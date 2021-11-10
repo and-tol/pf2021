@@ -5,7 +5,7 @@ import { IProject } from "../../../interfaces/project.interface";
 
 export default function handler(
   { query: { alias } }: NextApiRequest,
-  res: NextApiResponse<IProject>
+  res: NextApiResponse
 ) {
   const filtered = projects.filter(
     (project: IProject) => project.alias === alias

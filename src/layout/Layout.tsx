@@ -7,7 +7,7 @@ import { LayoutProps, FooterAppearance } from "./Layout.props";
 
 export const Layout = ({
   children,
-  className = "bg-primary",
+  className,
   ...props
 }: PropsWithChildren<LayoutProps>): JSX.Element => {
   const router = useRouter();

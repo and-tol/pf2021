@@ -11,10 +11,18 @@ export const Heading = ({
   const Tag = tag || "h1";
   switch (tag) {
     case "h1":
-    case "h2":
       return (
         <Tag
           className={cn(styles.h1, "font-primary-color", className)}
+          {...props}
+        >
+          {children}
+        </Tag>
+      );
+    case "h2":
+      return (
+        <Tag
+          className={cn(styles.h2, "font-primary-color", className)}
           {...props}
         >
           {children}

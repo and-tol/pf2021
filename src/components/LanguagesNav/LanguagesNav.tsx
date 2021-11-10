@@ -27,14 +27,14 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
     setVisible(!visible);
   };
 
-  const handleLangPage = (e: MouseEvent, path: string): void => {
+  const handleLangPage = (e: React.MouseEvent, path: string): void => {
     e.preventDefault();
     setVisible(!visible);
     router.push(path);
   };
 
   return (
-    <div>
+    <>
       {!visible && (
         <div className={stylesDropdown.navLang}>
           <button
@@ -65,7 +65,9 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
                       styles.navItem,
                       pathname === lang.path ? styles.active : undefined
                     )}
-                    onClick={(e) => handleLangPage(e, lang.path)}
+                    onClick={(e: React.MouseEvent) =>
+                      handleLangPage(e, lang.path)
+                    }
                   >
                     {lang.lang}
                   </a>
@@ -80,6 +82,6 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
           })}
         </nav>
       )}
-    </div>
+    </>
   );
 };

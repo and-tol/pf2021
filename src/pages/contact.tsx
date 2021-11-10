@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
 import { GetStaticProps } from "next";
-import { Layout } from "../layout/Layout";
-import { AppConfig } from "../utils/App.config";
+import Head from "next/head";
+import React from "react";
 import { Contact } from "../components";
 import { Socials } from "../interfaces/socials.interface";
+import { Layout } from "../layout/Layout";
+import { AppConfig } from "../utils/App.config";
 
 export default function ContactPage({
   socials,
@@ -15,7 +15,7 @@ export default function ContactPage({
         <title> {AppConfig.title} | Contact</title>
       </Head>
 
-      <Contact socials={socials} />
+      {/* {socials && <Contact socials={socials} />} */}
     </Layout>
   );
 }
@@ -25,7 +25,9 @@ export const getStaticProps: GetStaticProps = async () => {
   const socials = await response.json();
 
   if (!socials) {
-    return { notFound: true };
+    return {
+      notFound: true,
+    };
   }
 
   return {
@@ -34,5 +36,5 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 interface ContactPageProps {
-  socials?: Socials[];
+  socials: Socials[];
 }
