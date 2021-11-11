@@ -10,15 +10,13 @@ export default function ProjectAlias({
   project,
 }: ProjectAliasProps): JSX.Element {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title> {AppConfig.title} | Project</title>
-        </Head>
+    <Layout className="bg-primary">
+      <Head>
+        <title> {AppConfig.title} | Project</title>
+      </Head>
 
-        <Project project={project} />
-      </Layout>
-    </>
+      <Project project={project} />
+    </Layout>
   );
 }
 
@@ -27,6 +25,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     `${process.env.API_HOST}/projects/${context.params?.alias}`
   );
   const project = await response.json();
+
   if (!project) {
     return { notFound: true };
   }

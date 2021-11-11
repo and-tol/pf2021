@@ -1,12 +1,14 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { Heading, P } from '..';
 import LineDots from './line-dots.svg';
 import styles from './Project.module.scss';
 import { ProjectProps } from './Project.props';
 
 export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
+  const { name, path, url, image, technologies, description } = project;
+
   if (!project) {
     return (
       <section className="wrapper">
@@ -14,7 +16,15 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
       </section>
     );
   }
-  const { name, path, url, image, technologies, description } = project;
+
+  const [proportion, setProportion] = useState<number>(0.25);
+
+  const handleImageLoader = (sizes: {
+    naturalWidth: number;
+    naturalHeight: number;
+  }) => {
+    setProportion(sizes.naturalWidth / sizes.naturalHeight);
+  };
 
   return (
     <section className={cn('wrapper', styles.section)} {...props}>
@@ -26,10 +36,18 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
           <Image
             src={`${path}${image}`}
             sizes="50vw"
-            width="450"
-            objectFit="contain"
-            objectPosition="left top"
-            layout="fill"
+            width={450}
+            // height={450}
+            height={450 / proportion}
+            // objectFit="contain"
+            // objectPosition="left top"
+            // layout="fill"
+            layout="responsive"
+            // priority
+            loading="eager"
+            placeholder="blur"
+            blurDataURL={`${path}${image}`}
+            onLoadingComplete={(sizes) => handleImageLoader(sizes)}
           />
         </figure>
         <section className={styles.text}>
@@ -47,11 +65,7 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
             })}
           </ul>
           <P className="mt-1">{description}</P>
-          <a
-            href={url}
-            className={cn('button', 'btn-bg-primary', 'mt-2')}
-            target="_blank"
-          >
+          <a href={url} className={cn('button', 'mt-2')} target="_blank">
             Open Project
           </a>
         </section>
