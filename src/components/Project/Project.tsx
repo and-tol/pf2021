@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { Heading, P } from '..';
+import { Button, Heading, P } from '..';
 import LineDots from './line-dots.svg';
 import styles from './Project.module.scss';
 import { ProjectProps } from './Project.props';
@@ -65,8 +65,10 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
             })}
           </ul>
           <P className="mt-1">{description}</P>
-          <a href={url} className={cn('button', 'mt-2')} target="_blank">
-            Open Project
+          <a href={url} target="_blank">
+            <Button className={cn('button', 'mt-2')} appearance="primary">
+              Open Project
+            </Button>
           </a>
         </section>
       </article>
