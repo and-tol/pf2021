@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Footer, Header } from '.';
 import { FooterAppearance } from './Footer/Footer.props';
-import styles from './Layout.module.css';
+import styles from './Layout.module.scss';
 import { LayoutProps } from './Layout.props';
 
 export const Layout = ({
