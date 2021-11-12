@@ -37,7 +37,7 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               React ecosystem.
             </P>
           </div>
-          <a href="">
+          <a href="/assets/data/CV_AndrejsTolstojs_e.pdf">
             <Button appearance="primary">Download CV</Button>
           </a>
         </article>
