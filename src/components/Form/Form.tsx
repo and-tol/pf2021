@@ -7,7 +7,7 @@ export const Form = ({ ...props }: FormProps): JSX.Element => {
   return (
     <form name="form" {...props} className={styles.form}>
       <h4 className={cn(styles.title, 'formTitle')}>Email</h4>
-      <div>
+      <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>
           Your Name
         </label>
@@ -19,7 +19,7 @@ export const Form = ({ ...props }: FormProps): JSX.Element => {
           className={styles.input}
         />
       </div>
-      <div>
+      <div className={styles.inputContainer}>
         <label htmlFor="subject" className={styles.label}>
           Subject
         </label>

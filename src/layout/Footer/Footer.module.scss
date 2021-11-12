@@ -20,11 +20,20 @@
 
   height: 170px;
 
+  pointer-events: none;
+
   background: linear-gradient(
     180deg,
     rgba(30, 37, 44, 0) 0%,
     rgba(30, 37, 44, 1) 60%
   );
+
+  @media (max-width: 540px) {
+    height: 130px;
+  }
+  @media (max-width: 770px) {
+    height: 160px;
+  }
 }
 
 .primary {
