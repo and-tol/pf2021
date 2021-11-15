@@ -33,6 +33,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "babel-plugin-macros": "^3.1.0",
     "emailjs": "^3.6.0",
+    "emailjs-com": "^3.2.0",
     "i18next": "^21.2.4",
     "next": "11.1.2",
     "node-fetch": "^3.1.0",

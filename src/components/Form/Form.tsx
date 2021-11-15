@@ -1,5 +1,6 @@
 import { FormProps } from './Form.props';
 import cn from 'classnames';
+import emailjs from 'emailjs-com';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Button } from '..';
 import styles from './Form.module.scss';
@@ -12,22 +13,29 @@ export const Form = ({ ...props }: FormProps): JSX.Element => {
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
-    try {
-      const response = await fetch(`http://localhost:3005/api/email`, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
+  const onSubmit: SubmitHandler<IFormInputs> = async (data: IFormInputs) => {
+    const templateParams = {
+      from_name: data.name,
+      subject: data.subject,
+      from_email: '',
+      message: data.text,
+    };
+
+    emailjs
+      .send(
+        `${process.env.NEXT_PUBLIC_EMAILJS_COM_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_EMAILJS_COM_TEMPLATE_ID}`,
+        templateParams,
+        `${process.env.NEXT_PUBLIC_EMAILJS_COM_USER_ID}`
+      )
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
         },
-      });
-
-      const json = await response.json();
-
-      console.log('Успех:', JSON.stringify(json));
-    } catch (error) {
-      console.error('Ошибка: ', error);
-    }
+        function (err) {
+          console.log('FAILED...', err);
+        }
+      );
   };
 
   return (
