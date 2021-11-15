@@ -8,7 +8,10 @@ import styles from '../../styles/Navigation.module.scss';
 import stylesDropdown from './LanguagesNav.module.scss';
 import NavItemDots from '../../assets/horDots.svg';
 
-export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
+export const LanguagesNav = ({
+  appearance,
+  ...props
+}: LanguagesNavProps): JSX.Element => {
   const { pathname } = useRouter();
   const languages = Object.values(appLanguages);
 
@@ -63,6 +66,7 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
                   <a
                     className={cn(
                       styles.navItem,
+                      { [styles.secondColor]: appearance === 'white' },
                       pathname === lang.path ? styles.active : undefined
                     )}
                     onClick={(e: React.MouseEvent) =>
@@ -72,7 +76,11 @@ export const LanguagesNav = ({ ...props }: LanguagesNavProps): JSX.Element => {
                     {lang.lang}
                   </a>
                   {idx !== Object.values(appLanguages).length - 1 ? (
-                    <NavItemDots className={styles.dots} />
+                    <NavItemDots
+                      className={cn(styles.dots, {
+                        [styles.secondColor]: appearance === 'white',
+                      })}
+                    />
                   ) : (
                     <></>
                   )}

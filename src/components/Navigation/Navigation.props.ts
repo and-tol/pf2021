@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { FooterAppearance } from '../../layout/Footer/Footer.props';
+import { PageBackgroundAppearance } from '../../layout/Layout.props';
 
 export interface NavigationProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  appearance?: FooterAppearance;
+  appearance?: PageBackgroundAppearance;
 }
