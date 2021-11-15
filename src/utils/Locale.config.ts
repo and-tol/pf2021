@@ -21,7 +21,7 @@ export interface AppLanguage {
 
 export interface AppLanguages {
   eng: AppLanguage;
-  rus: AppLanguage;
+  // rus: AppLanguage;
 }
 
 export const appLanguages: AppLanguages = {
