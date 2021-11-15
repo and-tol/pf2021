@@ -12,8 +12,22 @@ export const Form = ({ ...props }: FormProps): JSX.Element => {
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
-    console.log('mail >>>>', data);
+  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
+    try {
+      const response = await fetch(`http://localhost:3005/api/email`, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const json = await response.json();
+
+      console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+      console.error('Ошибка: ', error);
+    }
   };
 
   return (
