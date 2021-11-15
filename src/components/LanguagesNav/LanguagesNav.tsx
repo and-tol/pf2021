@@ -18,14 +18,6 @@ export const LanguagesNav = ({
   const [currentLang, setCurrentLang] = useState<string>('eng');
   const [visible, setVisible] = useState<boolean>(false);
 
-  useEffect(() => {
-    languages.forEach((element: AppLanguage) => {
-      if (element.path === pathname) {
-        setCurrentLang(element.lang);
-      }
-    });
-  }, [pathname]);
-
   const handleVisible = (): void => {
     setVisible(!visible);
   };
@@ -38,14 +30,14 @@ export const LanguagesNav = ({
 
   return (
     <>
-      {!visible && (
+      {languages.length > 1 && !visible && (
         <div className={stylesDropdown.navLang}>
           <button
             className={cn(
               'font-accent',
               styles.navItem,
               styles.active,
-              // pathname === lang.path ? styles.active : undefined,
+              // pathname === language.path ? styles.active : undefined,
               stylesDropdown.btn
             )}
             onClick={handleVisible}
@@ -54,26 +46,26 @@ export const LanguagesNav = ({
           </button>
         </div>
       )}
-      {visible && (
+      {languages.length > 1 && visible && (
         <nav
           className={cn(stylesDropdown.navLang, stylesDropdown.dropdownNav)}
           {...props}
         >
-          {languages.map((lang: AppLanguage, idx: number): JSX.Element => {
+          {languages.map((language: AppLanguage, idx: number): JSX.Element => {
             return (
-              <Link key={lang.lang} href={lang.path}>
+              <Link key={language.lang} href={language.path}>
                 <>
                   <a
                     className={cn(
                       styles.navItem,
                       { [styles.secondColor]: appearance === 'white' },
-                      pathname === lang.path ? styles.active : undefined
+                      pathname === language.path ? styles.active : undefined
                     )}
                     onClick={(e: React.MouseEvent) =>
-                      handleLangPage(e, lang.path)
+                      handleLangPage(e, language.path)
                     }
                   >
-                    {lang.lang}
+                    {language.lang}
                   </a>
                   {idx !== Object.values(appLanguages).length - 1 ? (
                     <NavItemDots

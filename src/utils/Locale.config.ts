@@ -16,6 +16,7 @@ export enum Path {
 export interface AppLanguage {
   lang: string;
   path: string;
+  isRealized: boolean;
 }
 
 export interface AppLanguages {
@@ -23,13 +24,15 @@ export interface AppLanguages {
   rus: AppLanguage;
 }
 
-export const appLanguages = {
+export const appLanguages: AppLanguages = {
   [Languages.Eng]: {
     [LanguagesKeys.Lang]: Languages.Eng,
     [LanguagesKeys.Path]: Path.Root,
+    isRealized: true,
   },
-  [Languages.Rus]: {
-    [LanguagesKeys.Lang]: Languages.Rus,
-    [LanguagesKeys.Path]: `${Path.Root}${Languages.Rus}`,
-  },
+  // [Languages.Rus]: {
+  //   [LanguagesKeys.Lang]: Languages.Rus,
+  //   [LanguagesKeys.Path]: `${Path.Root}${Languages.Rus}`,
+  //   isRealized: false,
+  // },
 };
