@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import { Project } from '../../components';
@@ -20,7 +20,18 @@ export default function ProjectAlias({
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await fetch(`${process.env.API_HOST}/projects`);
+  const projects: IProject[] = await response.json();
+
+  const paths = projects.map((project) => ({
+    params: { alias: project.alias },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
   const response = await fetch(
     `${process.env.API_HOST}/projects/${context.params?.alias}`
   );
@@ -31,9 +42,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   return {
-    props: {
-      project,
-    },
+    props: { project },
   };
 };
 

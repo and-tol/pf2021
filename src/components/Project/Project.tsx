@@ -7,7 +7,7 @@ import styles from './Project.module.scss';
 import { ProjectProps } from './Project.props';
 
 export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
-  const { name, path, url, image, technologies, description } = project;
+  const { name, path, url, image, technologies, description } = project || {};
 
   if (!project) {
     return (
