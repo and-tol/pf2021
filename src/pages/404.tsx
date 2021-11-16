@@ -1,31 +1,29 @@
-// import { useEffect } from "react";
-// import { useRouter } from "next/router";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-// import Heading from '../components/Heading';
+import { Heading } from '../components';
 // import styles from '../styles/404.module.scss';
 
 const Error = (): JSX.Element => {
-  // const router = useRouter();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   let timerId = setTimeout(() => {
-  //     router.push("/");
-  //   }, 2000);
-  //   return () => {
-  //     clearTimeout(timerId);
-  //   };
-  // }, [router]);
+  useEffect(() => {
+    let timerId = setTimeout(() => {
+      router.push('/');
+    }, 3500);
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [router]);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper center">
       <Head>
         <title>Error</title>
       </Head>
       <div>
-        <h1>404</h1>
-        <h2>Something is going wrong...</h2>
-        {/* <Heading text='404' />
-        <Heading tag='h2' text='Something is going wrong...' /> */}
+        <Heading tag="h1">404</Heading>
+        <Heading tag="h2">Something is going wrong...</Heading>
       </div>
     </div>
   );

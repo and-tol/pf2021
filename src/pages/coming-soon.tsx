@@ -4,7 +4,7 @@ import Head from 'next/head';
 import React from 'react';
 import { Heading } from '../components';
 
-const Error = (): JSX.Element => {
+const ComingSoonPage = (): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const Error = (): JSX.Element => {
   );
 };
 
-export default Error;
+export default ComingSoonPage;
