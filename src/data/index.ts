@@ -13,6 +13,7 @@ export const projects: IProject[] = [
       'NextJS',
       'React',
       'SSG',
+      'TypeScript',
       'Grid',
       'Flex',
       'SCSS',
