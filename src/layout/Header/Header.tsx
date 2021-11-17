@@ -1,6 +1,6 @@
 import React from 'react';
 import { LanguagesNav } from '../../components';
-import { appLanguages } from '../../utils/Locale.config';
+import { appLanguages } from '../../config/Locale.config';
 import { HeaderProps } from './Header.props';
 
 export const Header = ({

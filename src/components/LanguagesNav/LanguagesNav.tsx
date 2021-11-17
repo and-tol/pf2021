@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 import router, { useRouter } from 'next/router';
 import Link from 'next/link';
-import { AppLanguage, appLanguages } from '../../utils/Locale.config';
+import { AppLanguage, appLanguages } from '../../config/Locale.config';
 import { LanguagesNavProps } from './LanguagesNav.props';
 import styles from '../../styles/Navigation.module.scss';
 import stylesDropdown from './LanguagesNav.module.scss';
