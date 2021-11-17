@@ -4,7 +4,7 @@ import React from 'react';
 import { Project } from '../../components';
 import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
-import { AppConfig } from '../../utils/App.config';
+import { AppConfig } from '../../config/App.config';
 
 export default function ProjectAlias({
   project = null,

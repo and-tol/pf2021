@@ -2,6 +2,27 @@ import { IProject } from '../interfaces/project.interface';
 
 export const projects: IProject[] = [
   {
+    _id: '13',
+    name: 'Andrey Tolstoy portfolio',
+    alias: 'pf2021',
+    path: '/assets/images/',
+    url: '#',
+    imageSmall: 'pf2021.png',
+    image: 'pf2021_big.png',
+    technologies: [
+      'NextJS',
+      'React',
+      'SSG',
+      'Grid',
+      'Flex',
+      'SCSS',
+      'React Hook Form',
+      'Adaptive',
+      'Git',
+    ],
+    description: 'Portfolio by Andrey Tolstoy, created with framework NextJS',
+  },
+  {
     _id: '1',
     name: 'Артём Пицца',
     alias: 'artem-pizza',

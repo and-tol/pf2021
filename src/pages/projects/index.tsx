@@ -4,7 +4,7 @@ import React from 'react';
 import { Projects } from '../../components';
 import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
-import { AppConfig } from '../../utils/App.config';
+import { AppConfig } from '../../config/App.config';
 
 export default function ProjectsPage({
   projects = null,
