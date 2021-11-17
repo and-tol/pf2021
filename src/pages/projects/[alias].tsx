@@ -1,6 +1,6 @@
+import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import React from 'react';
 import { Project } from '../../components';
 import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
@@ -22,9 +22,9 @@ export default function ProjectAlias({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/projects`);
-  const projects: IProject[] = await response.json();
+  const projects = await response.json();
 
-  const paths = projects.map((project) => ({
+  const paths = projects.map((project: IProject) => ({
     params: { alias: project.alias },
   }));
 

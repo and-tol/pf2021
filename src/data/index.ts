@@ -6,7 +6,7 @@ export const projects: IProject[] = [
     name: 'Andrey Tolstoy portfolio',
     alias: 'pf2021',
     path: '/assets/images/',
-    url: '#',
+    url: '/',
     imageSmall: 'pf2021.png',
     image: 'pf2021_big.png',
     technologies: [
