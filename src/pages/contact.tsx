@@ -7,7 +7,7 @@ import { Layout } from '../layout/Layout';
 import { AppConfig } from '../utils/App.config';
 
 export default function ContactPage({
-  socials,
+  socials = null,
 }: ContactPageProps): JSX.Element {
   return (
     <Layout className="bg-secondary font-secondary-color">
@@ -21,7 +21,7 @@ export default function ContactPage({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`${process.env.API_HOST}/socials`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/socials`);
   const socials = await response.json();
 
   if (!socials) {
@@ -36,5 +36,5 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 interface ContactPageProps {
-  socials: Socials[];
+  socials: Socials[] | null;
 }

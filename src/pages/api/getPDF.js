@@ -1,11 +1,10 @@
+import fetch from 'node-fetch';
 import stream from 'stream';
 import { promisify } from 'util';
-import fetch from 'node-fetch';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 const pipeline = promisify(stream.pipeline);
 const url = {
-  en: `${process.env.API_HOST}/data/CV_AndrejsTolstojs_e.pdf`,
+  en: `${process.env.NEXT_PUBLIC_API_HOST}/data/CV_AndrejsTolstojs_e.pdf`,
 };
 
 const handler = async (req, res) => {

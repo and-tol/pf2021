@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import React from 'react';
 import { Heading } from '../components';
 
 const ComingSoonPage = (): JSX.Element => {

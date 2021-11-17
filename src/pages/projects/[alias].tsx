@@ -7,7 +7,7 @@ import { Layout } from '../../layout/Layout';
 import { AppConfig } from '../../utils/App.config';
 
 export default function ProjectAlias({
-  project,
+  project = null,
 }: ProjectAliasProps): JSX.Element {
   return (
     <Layout className="bg-primary">
@@ -21,7 +21,7 @@ export default function ProjectAlias({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch(`${process.env.API_HOST}/projects`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/projects`);
   const projects: IProject[] = await response.json();
 
   const paths = projects.map((project) => ({
@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const response = await fetch(
-    `${process.env.API_HOST}/projects/${context.params?.alias}`
+    `${process.env.NEXT_PUBLIC_API_HOST}/projects/${context.params?.alias}`
   );
   const project = await response.json();
 
@@ -47,5 +47,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export interface ProjectAliasProps {
-  project: IProject;
+  project: IProject | null;
 }

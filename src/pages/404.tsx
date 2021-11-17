@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Heading } from '../components';
-// import styles from '../styles/404.module.scss';
 
-const Error = (): JSX.Element => {
+const NotFound = (): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
@@ -29,4 +28,4 @@ const Error = (): JSX.Element => {
   );
 };
 
-export default Error;
+export default NotFound;
