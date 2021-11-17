@@ -22,9 +22,9 @@ export default function ProjectAlias({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/projects`);
-  const projects = await response.json();
+  const projects: IProject[] = await response.json();
 
-  const paths = projects.map((project: IProject) => ({
+  const paths = projects.map((project) => ({
     params: { alias: project.alias },
   }));
 
