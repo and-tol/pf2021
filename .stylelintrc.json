@@ -1,15 +1,13 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-order-config-standard"
+    "stylelint-order-config-standard",
+    "stylelint-config-prettier"
   ],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "indentation": [
-      2
-    ],
-    "color-hex-case": "upper"
+    "indentation": [2],
+    "color-hex-case": "upper",
+    "string-quotes": "single"
   }
 }

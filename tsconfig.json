@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -15,6 +19,15 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "next-env.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "declaration.d.ts",
+    "images.d.ts",
+    "next-env-custom.d.ts"
+, "src/pages/api/getPDF.js", "src/pages/api/getPDF.js"    // "next-env.d.ts"
+, "src/utils/_error.bak"  ],
+  "exclude": [
+    "node_modules",
+  ]
 }

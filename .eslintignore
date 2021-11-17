@@ -5,4 +5,10 @@
 /build
 /public/*
 /.next
+/.vscode
+/.husky
+/ .git
 next-env.d.ts
+*.css
+*.scss
+*.svg

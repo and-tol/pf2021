@@ -1,27 +1,33 @@
-const { i18n } = require('./next-i18next.config');
-
 module.exports = {
-  i18n,
+  i18n: {
+    locales: ["en", "ru"],
+    defaultLocale: "ru",
+    // localePath: path.resolve('./public/static/locales'),
+  },
 };
 
-// Ability to use svg as components
+module.exports = {
+  eslint: {
+    dirs: ["pages", "utils", "components"], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+  },
+};
+
+// Ability to use svg as components for new NextJS
 module.exports = {
   webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: { and: [/\.(js|ts|md)x?$/] },
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            prettier: false,
-            svgo: true,
-            svgoConfig: { plugins: [{ removeViewBox: false }] },
-            titleProp: true,
-          },
+      loader: "@svgr/webpack",
+      options: {
+        prettier: false,
+        svgo: true,
+        svgoConfig: {
+          plugins: [{ removeViewBox: false }],
         },
-      ],
+        titleProp: true,
+      },
+      test: /\.svg$/,
     });
+
     return config;
   },
 };
