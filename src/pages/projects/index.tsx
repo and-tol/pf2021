@@ -6,7 +6,9 @@ import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
 import { AppConfig } from '../../utils/App.config';
 
-export default function ProjectsPage({ projects }: ProjectsProps): JSX.Element {
+export default function ProjectsPage({
+  projects = null,
+}: ProjectsProps): JSX.Element {
   return (
     <Layout className="bg-primary">
       <Head>
@@ -19,7 +21,7 @@ export default function ProjectsPage({ projects }: ProjectsProps): JSX.Element {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`${process.env.API_HOST}/projects`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/projects`);
   const projects = await response.json();
 
   if (!projects) {
@@ -36,5 +38,5 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 interface ProjectsProps extends Record<string, unknown> {
-  projects: IProject[];
+  projects: IProject[] | null;
 }

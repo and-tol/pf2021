@@ -56,13 +56,14 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
             <h3 className={styles.title}>{name}</h3>
           </div>
           <ul className={styles.tagsContainer}>
-            {technologies.map((technology: string, idx: number) => {
-              return (
-                <li key={idx} className={styles.tag}>
-                  {technology}
-                </li>
-              );
-            })}
+            {technologies &&
+              technologies.map((technology: string, idx: number) => {
+                return (
+                  <li key={idx} className={styles.tag}>
+                    {technology}
+                  </li>
+                );
+              })}
           </ul>
           <P className="mt-1">{description}</P>
           <a href={url} target="_blank">
