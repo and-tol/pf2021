@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Heading } from '../components';
 
-const NotFound = (): JSX.Element => {
+const NotFoundPage = (): JSX.Element => {
   const router = useRouter();
 
   useEffect(() => {
@@ -28,4 +28,4 @@ const NotFound = (): JSX.Element => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

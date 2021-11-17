@@ -4,18 +4,16 @@ import { projects } from '../../../data';
 import { IProject } from '../../../interfaces/project.interface';
 
 export default function handler(
-  { query: { alias } }: NextApiRequest,
+  { query: { slug } }: NextApiRequest,
   res: NextApiResponse
 ) {
   const filtered = projects.filter(
-    (project: IProject) => project.alias === alias
+    (project: IProject) => project.slug === slug
   );
 
   if (filtered.length > 0) {
     res.status(200).json(filtered[0]);
   } else {
-    res
-      .status(404)
-      .json({ message: `Page with alias of ${alias} is not found` });
+    res.status(404).json({ message: `Page with slug of ${slug} is not found` });
   }
 }

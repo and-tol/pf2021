@@ -4,7 +4,7 @@ import { Hero } from '../components';
 import { Layout } from '../layout/Layout';
 import { AppConfig } from '../config/App.config';
 
-export default function Index(): JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <Layout className="bg-primary">
       <Head>

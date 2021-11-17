@@ -1,10 +1,10 @@
-import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import React from 'react';
 import { Project } from '../../components';
+import { AppConfig } from '../../config/App.config';
 import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
-import { AppConfig } from '../../config/App.config';
 
 export default function ProjectAlias({
   project = null,
@@ -21,11 +21,11 @@ export default function ProjectAlias({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/projects`);
+  const response = await fetch(`${process.env.API_HOST}/projects`);
   const projects: IProject[] = await response.json();
 
   const paths = projects.map((project) => ({
-    params: { alias: project.alias },
+    params: { slug: project.slug },
   }));
 
   return { paths, fallback: false };
@@ -33,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_HOST}/projects/${context.params?.alias}`
+    `${process.env.API_HOST}/projects/${context.params?.slug}`
   );
   const project = await response.json();
 
