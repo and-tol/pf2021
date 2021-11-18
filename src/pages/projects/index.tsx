@@ -21,6 +21,7 @@ export default function ProjectsPage({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log(`${process.env.API_HOST}`);
   const response = await fetch(`${process.env.API_HOST}/projects`);
   const projects = await response.json();
   console.log('projects', projects);
