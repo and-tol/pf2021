@@ -6,6 +6,8 @@ import { IProject } from '../../interfaces/project.interface';
 import { Layout } from '../../layout/Layout';
 import { AppConfig } from '../../config/App.config';
 
+import { getServerData } from '../../utils/getServerData';
+
 export default function ProjectsPage({
   projects = null,
 }: ProjectsProps): JSX.Element {
@@ -20,16 +22,11 @@ export default function ProjectsPage({
   );
 }
 
+//Эта функция вызывается во время сборки на стороне сервера.
+//Он не будет вызываться на стороне клиента, поэтому вы даже можете выполнять
+//прямые запросы к базе данных.
 export const getStaticProps: GetStaticProps = async () => {
-  console.log(`${process.env.API_HOST}`);
-  const response = await fetch(`${process.env.API_HOST}/projects`);
-  const projects = await response.json();
-  console.log('projects', projects);
-  if (!projects) {
-    return {
-      notFound: true,
-    };
-  }
+  const projects = await getServerData('data', 'projects.json');
 
   return {
     props: {
