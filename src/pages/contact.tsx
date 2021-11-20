@@ -34,20 +34,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: { socials },
   };
 };
-// export const getStaticProps: GetStaticProps = async () => {
-//   const response = await fetch(`${process.env.API_HOST}/socials`);
-//   const socials = await response.json();
-
-//   if (!socials) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-
-//   return {
-//     props: { socials },
-//   };
-// };
 
 interface ContactPageProps {
   socials: Socials[] | null;
