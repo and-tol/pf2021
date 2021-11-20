@@ -12,11 +12,12 @@
       "React",
       "SSG",
       "TypeScript",
-      "Grid",
-      "Flex",
+      "CSS Grid",
+      "Flexbox",
       "SCSS",
       "React Hook Form",
       "Adaptive",
+      "Font-Awesome",
       "Git"
     ],
     "description": "Portfolio by Andrey Tolstoy, created with framework NextJS"
@@ -34,7 +35,7 @@
       "React",
       "Redux",
       "Redux Thunk",
-      "Flex",
+      "Flexbox",
       "SCSS",
       "Styled Component",
       "React Hook Form",
@@ -71,7 +72,7 @@
     "imageSmall": "timecaps.png",
     "image": "timecaps_large.png",
     "technologies": [
-      "Flex",
+      "Flexbox",
       "CSS Animation",
       "jQuery",
       "OWL-carousel",
@@ -114,7 +115,7 @@
     "imageSmall": "zeiss.jpg",
     "image": "zeiss_large.jpg",
     "technologies": [
-      "Grid",
+      "CSS Grid",
       "FullpageJS",
       "Swiper",
       "TabbisJS",
