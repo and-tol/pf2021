@@ -23,10 +23,16 @@ export default function ProjectsPage({
 }
 
 //Эта функция вызывается во время сборки на стороне сервера.
-//Он не будет вызываться на стороне клиента, поэтому вы даже можете выполнять
+//Она не будет вызываться на стороне клиента, поэтому вы даже можете выполнять
 //прямые запросы к базе данных.
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await getServerData('data', 'projects.json');
+
+  if (!projects) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
