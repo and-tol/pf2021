@@ -28,6 +28,12 @@ export default function ProjectsPage({
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await getServerData('data', 'projects.json');
 
+  if (!projects) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       projects,
