@@ -6,7 +6,7 @@ export const projects: IProject[] = [
     name: 'Andrey Tolstoy portfolio',
     slug: 'pf2021',
     path: '/assets/images/',
-    url: '/',
+    url: 'https://pf2021-ten.vercel.app/',
     imageSmall: 'pf2021.png',
     image: 'pf2021_big.png',
     technologies: [
