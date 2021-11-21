@@ -3,5 +3,5 @@ import { Socials } from '../../interfaces/socials.interface';
 
 export interface ContactsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  socials: Socials[];
+  socials: Socials[] | null;
 }

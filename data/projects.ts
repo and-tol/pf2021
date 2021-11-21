@@ -1,18 +1,19 @@
-import { IProject } from '../interfaces/project.interface';
+import { IProject } from '../src/interfaces/project.interface';
 
 export const projects: IProject[] = [
   {
     _id: '13',
     name: 'Andrey Tolstoy portfolio',
-    alias: 'pf2021',
+    slug: 'pf2021',
     path: '/assets/images/',
-    url: '#',
+    url: '/',
     imageSmall: 'pf2021.png',
     image: 'pf2021_big.png',
     technologies: [
       'NextJS',
       'React',
       'SSG',
+      'TypeScript',
       'Grid',
       'Flex',
       'SCSS',
@@ -25,7 +26,7 @@ export const projects: IProject[] = [
   {
     _id: '1',
     name: 'Артём Пицца',
-    alias: 'artem-pizza',
+    slug: 'artem-pizza',
     path: '/assets/images/',
     url: 'https://artem-pizza-client.netlify.app/',
     imageSmall: 'artem-pizza.png',
@@ -48,7 +49,7 @@ export const projects: IProject[] = [
   {
     _id: '2',
     name: 'Forecast',
-    alias: 'forecast',
+    slug: 'forecast',
     path: '/assets/images/',
     url: 'https://forecast-react-1.netlify.app/',
     imageSmall: 'forecast-react-1.jpg',
@@ -60,7 +61,7 @@ export const projects: IProject[] = [
   {
     _id: '3',
     name: 'Timecaps',
-    alias: 'timecaps',
+    slug: 'timecaps',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/timecaps/index.html',
     imageSmall: 'timecaps.png',
@@ -82,7 +83,7 @@ export const projects: IProject[] = [
   {
     _id: '4',
     name: 'Zelta Rudens',
-    alias: 'zelta-rudens',
+    slug: 'zelta-rudens',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/zeltarudens/index.html',
     imageSmall: 'zelta_rudens.png',
@@ -103,7 +104,7 @@ export const projects: IProject[] = [
   {
     _id: '5',
     name: 'Zeiss',
-    alias: 'zeiss',
+    slug: 'zeiss',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/zeiss/index.html',
     imageSmall: 'zeiss.jpg',
@@ -122,7 +123,7 @@ export const projects: IProject[] = [
   {
     _id: '11',
     name: 'Prefabhome',
-    alias: 'prefabhome',
+    slug: 'prefabhome',
     path: '/assets/images/',
     url: 'https://prefabhome.eu/',
     imageSmall: 'prefabhome.png',
@@ -142,7 +143,7 @@ export const projects: IProject[] = [
   {
     _id: '6',
     name: 'Adrian John Inc',
-    alias: 'adrian-john',
+    slug: 'adrian-john',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/adrianjohninc/index.html',
     imageSmall: 'Adrian_John_Inc_prw.png',
@@ -160,7 +161,7 @@ export const projects: IProject[] = [
   {
     _id: '7',
     name: 'Transporters',
-    alias: 'transporters',
+    slug: 'transporters',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/transporters/index.html',
     imageSmall: 'transporters.png',
@@ -171,7 +172,7 @@ export const projects: IProject[] = [
   {
     _id: '8',
     name: 'Madame Le Constructeur',
-    alias: 'madame-constructeur',
+    slug: 'madame-constructeur',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/madameleconstructeur/index.html',
     imageSmall: 'madam_le_constructeur.png',
@@ -182,7 +183,7 @@ export const projects: IProject[] = [
   {
     _id: '9',
     name: 'Kira-Kari',
-    alias: 'kira-kari',
+    slug: 'kira-kari',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/kirakari/product.html',
     imageSmall: 'kirakariproduct.png',
@@ -193,7 +194,7 @@ export const projects: IProject[] = [
   {
     _id: '10',
     name: 'Meandr',
-    alias: 'meandr',
+    slug: 'meandr',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/meandr/index.html',
     imageSmall: 'meandr.png',
@@ -205,7 +206,7 @@ export const projects: IProject[] = [
   {
     _id: '12',
     name: 'Bananas',
-    alias: 'bananas',
+    slug: 'bananas',
     path: '/assets/images/',
     url: 'https://andreitol.bitbucket.io/bananas/index.html',
     imageSmall: 'bananas.jpg',

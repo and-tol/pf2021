@@ -5,6 +5,7 @@ import { Contacts } from '../components';
 import { Socials } from '../interfaces/socials.interface';
 import { Layout } from '../layout/Layout';
 import { AppConfig } from '../config/App.config';
+import { getServerData } from '../utils/getServerData';
 
 export default function ContactPage({
   socials = null,
@@ -21,8 +22,7 @@ export default function ContactPage({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/socials`);
-  const socials = await response.json();
+  const socials = await getServerData('data', 'socials.json');
 
   if (!socials) {
     return {

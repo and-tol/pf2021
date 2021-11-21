@@ -1,4 +1,4 @@
-import { Socials } from '../interfaces/socials.interface';
+import { Socials } from '../src/interfaces/socials.interface';
 
 export const socials: Socials[] = [
   {
@@ -13,14 +13,12 @@ export const socials: Socials[] = [
     icon: 'github',
     path: 'https://github.com/and-tol',
   },
-
   {
     _id: 3,
     name: 'Bitbucket',
     icon: 'bitbucket',
     path: 'https://bitbucket.org/andreitol/',
   },
-
   {
     _id: 4,
     name: 'Twitter',

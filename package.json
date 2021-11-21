@@ -7,10 +7,10 @@
     "url": "https://github.com/and-tol/pf2021.git"
   },
   "scripts": {
-    "dev": "next dev -p 3005",
-    "debug": "NODE_OPTIONS='--inspect' next dev -p 3005",
+    "dev": "next dev -p 3001",
+    "build:debug": "next build --debug",
     "build": "next build",
-    "start": "next start -p 3005",
+    "start": "next start",
     "lint": "next lint",
     "stylelint:fix": "stylelint --fix src/**/*.{css,scss}",
     "eslint": "eslint src --ext .ts,.tsx",

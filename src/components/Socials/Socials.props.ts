@@ -6,5 +6,5 @@ export interface SocialsProps
     HTMLAttributes<HTMLUListElement>,
     HTMLUListElement
   > {
-  socials?: Socials[];
+  socials?: Socials[] | null;
 }

@@ -1,7 +1,7 @@
 export interface IProject {
   _id: string;
   name: string;
-  alias: string;
+  slug: string;
   path: string;
   url: string;
   imageSmall: string;

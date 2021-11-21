@@ -26,7 +26,7 @@
     "images.d.ts",
     "next-env-custom.d.ts"
 , "src/pages/api/getPDF.js", "src/pages/api/getPDF.js"    // "next-env.d.ts"
-, "src/utils/_error.bak"  ],
+, "src/utils/_error.bak", "data/projects.ts"  ],
   "exclude": [
     "node_modules",
   ]

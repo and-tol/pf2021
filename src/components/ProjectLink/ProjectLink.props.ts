@@ -6,5 +6,5 @@ export interface ProjectLinkProps
     AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  project: IProject;
+  project: IProject | null;
 }

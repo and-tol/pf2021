@@ -11,13 +11,13 @@ export const ProjectLink = ({
 }: ProjectLinkProps): JSX.Element => {
   return (
     <>
-      <Link href={`/projects/${project.alias}`}>
+      <Link href={`/projects/${project?.slug}`}>
         <a className={styles.link} {...props}>
-          <span className={styles.name}>{project.name}</span>
+          <span className={styles.name}>{project?.name}</span>
           <ArrowIcon className={styles.icon} />
           <div className={styles.image}>
             <Image
-              src={`/assets/images/${project.imageSmall}`}
+              src={`/assets/images/${project?.imageSmall}`}
               width="180"
               height="180"
               layout="intrinsic"
