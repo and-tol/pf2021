@@ -2,6 +2,30 @@ import { IProject } from '../src/interfaces/project.interface';
 
 export const projects: IProject[] = [
   {
+    _id: '14',
+    name: 'Space Tourism website',
+    slug: 'space-tourism',
+    path: '/assets/images/',
+    url: 'https://space-tourism-web.vercel.app/',
+    imageSmall: 'space-tourism.jpg',
+    image: 'space-tourism_big.jpg',
+    technologies: [
+      'NextJS',
+      'React',
+      'SSG',
+      'TypeScript',
+      'CSS Grid',
+      'Flexbox CSS',
+      'Module CSS',
+      'Custom Tabs',
+      'Adaptive',
+      'Swepeable Slider',
+      'Git',
+    ],
+    git: 'https://github.com/and-tol/space-tourism-web',
+    description: 'This is multi-page space tourism website',
+  },
+  {
     _id: '13',
     name: 'Andrey Tolstoy portfolio',
     slug: 'pf2021',

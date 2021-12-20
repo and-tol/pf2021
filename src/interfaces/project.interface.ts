@@ -9,4 +9,5 @@ export interface IProject {
   technologies: string[];
   description: string;
   message?: string;
+  git?: string;
 }
