@@ -25,21 +25,11 @@ export default function ProjectSlugPage({
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <Image
           src={`${path}${image}`}
-          // layout="responsive"
-          // sizes="50vw"
-          // width={450}
-          // height={450}
-          // height={300}
-          // objectFit="contain"
-          // objectPosition="left top"
-          // layout="fill"
           layout="fill"
           className={styles.picture}
-          // priority
           loading="eager"
           placeholder="blur"
           blurDataURL={`${path}${image}`}
-          // onLoadingComplete={(sizes) => handleImageLoader(sizes)}
         />
       </Modal>
     </Layout>

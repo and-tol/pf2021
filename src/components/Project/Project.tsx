@@ -42,13 +42,8 @@ export const Project = ({
               src={`${path}${image}`}
               sizes="50vw"
               width={450}
-              // height={450}
               height={450 / proportion}
-              // objectFit="contain"
-              // objectPosition="left top"
-              // layout="fill"
               layout="responsive"
-              // priority
               loading="eager"
               placeholder="blur"
               blurDataURL={`${path}${image}`}
