@@ -11,8 +11,6 @@ const url: URL = {
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await fetch(url.en);
 
-  console.log(response);
-
   if (!response) {
     // throw new Error(`unexpected response ${response.statusText}`);
     throw new Error(`unexpected response`);
