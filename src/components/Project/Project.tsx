@@ -6,7 +6,11 @@ import LineDots from './line-dots.svg';
 import styles from './Project.module.scss';
 import { ProjectProps } from './Project.props';
 
-export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
+export const Project = ({
+  project,
+  handleShowModal,
+  ...props
+}: ProjectProps): JSX.Element => {
   const { name, path, url, image, technologies, description } = project || {};
 
   if (!project) {
@@ -33,22 +37,24 @@ export const Project = ({ project, ...props }: ProjectProps): JSX.Element => {
       </Heading>
       <article className={styles.content}>
         <figure className={styles.image}>
-          <Image
-            src={`${path}${image}`}
-            sizes="50vw"
-            width={450}
-            // height={450}
-            height={450 / proportion}
-            // objectFit="contain"
-            // objectPosition="left top"
-            // layout="fill"
-            layout="responsive"
-            // priority
-            loading="eager"
-            placeholder="blur"
-            blurDataURL={`${path}${image}`}
-            onLoadingComplete={(sizes) => handleImageLoader(sizes)}
-          />
+          <a href="#" onClick={() => handleShowModal(true)}>
+            <Image
+              src={`${path}${image}`}
+              sizes="50vw"
+              width={450}
+              // height={450}
+              height={450 / proportion}
+              // objectFit="contain"
+              // objectPosition="left top"
+              // layout="fill"
+              layout="responsive"
+              // priority
+              loading="eager"
+              placeholder="blur"
+              blurDataURL={`${path}${image}`}
+              onLoadingComplete={(sizes) => handleImageLoader(sizes)}
+            />
+          </a>
         </figure>
         <section className={styles.text}>
           <div className={styles.titleContainer}>
