@@ -17,17 +17,22 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "declaration.d.ts",
     "images.d.ts",
-    "next-env-custom.d.ts"
-, "src/pages/api/getPDF.js", "src/pages/api/getPDF.js"    // "next-env.d.ts"
-, "src/utils/_error.bak", "data/projects.ts"  ],
+    "next-env-custom.d.ts",
+    "src/pages/api/getPDF.js",
+    "src/pages/api/getPDF.js" // "next-env.d.ts"
+    ,
+    "src/utils/_error.bak",
+    "data/projects.ts"
+  ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }
