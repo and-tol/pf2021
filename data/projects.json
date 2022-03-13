@@ -24,29 +24,6 @@
     "description": "This is multi-page space tourism website"
   },
   {
-    "_id": "13",
-    "name": "Andrey Tolstoy portfolio",
-    "slug": "pf2021",
-    "path": "/assets/images/",
-    "url": "https://pf2021-ten.vercel.app/",
-    "imageSmall": "pf2021.png",
-    "image": "pf2021_big.png",
-    "technologies": [
-      "NextJS",
-      "React",
-      "SSG",
-      "TypeScript",
-      "CSS Grid",
-      "Flexbox CSS",
-      "SCSS",
-      "React Hook Form",
-      "Adaptive",
-      "Font-Awesome",
-      "Git"
-    ],
-    "description": "Portfolio by Andrey Tolstoy, created with framework NextJS"
-  },
-  {
     "_id": "1",
     "name": "Артём Пицца",
     "slug": "artem-pizza",

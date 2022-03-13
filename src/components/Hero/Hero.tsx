@@ -36,6 +36,9 @@ export const Hero = ({ ...props }: HeroProps): JSX.Element => {
               Currently, I continue to study React, Redux, JavaScript and the
               React ecosystem.
             </P>
+            <P>
+              * Make adaptive with NextJS, TypeScript, React Hook Form, CSS Grid
+            </P>
           </div>
           <a href="/assets/data/CV_AndrejsTolstojs_e.pdf">
             <Button appearance="primary">Download CV</Button>

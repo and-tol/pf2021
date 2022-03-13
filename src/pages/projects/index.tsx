@@ -8,6 +8,10 @@ import { AppConfig } from '../../config/App.config';
 
 import { getServerData } from '../../utils/getServerData';
 
+interface ProjectsProps extends Record<string, unknown> {
+  projects: IProject[] | null;
+}
+
 export default function ProjectsPage({
   projects = null,
 }: ProjectsProps): JSX.Element {
@@ -40,7 +44,3 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
-
-interface ProjectsProps extends Record<string, unknown> {
-  projects: IProject[] | null;
-}
