@@ -1,7 +1,7 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { Modal, Project } from '../../components';
 import { AppConfig } from '../../config/App.config';
 import { IProject } from '../../interfaces/project.interface';
@@ -9,14 +9,19 @@ import { Layout } from '../../layout/Layout';
 import { getServerData } from '../../utils/getServerData';
 import styles from '../../styles/ModalPicture.module.scss';
 
-export default function ProjectSlugPage({
+type PropsType = {
+  children?: never;
+  project: IProject | null;
+};
+
+const ProjectSlugPage: NextPage<PropsType> = ({
   project = null,
-}: ProjectAliasProps): JSX.Element {
+}): ReactElement => {
   const { path, image } = project || {};
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <Layout className="bg-primary">
+    <Layout className='bg-primary'>
       <Head>
         <title> {AppConfig.title} | Project</title>
       </Head>
@@ -25,16 +30,16 @@ export default function ProjectSlugPage({
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <Image
           src={`${path}${image}`}
-          layout="fill"
+          layout='fill'
           className={styles.picture}
-          loading="eager"
-          placeholder="blur"
+          loading='eager'
+          placeholder='blur'
           blurDataURL={`${path}${image}`}
         />
       </Modal>
     </Layout>
   );
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const projects: IProject[] = await getServerData('data', 'projects.json');
@@ -61,6 +66,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export interface ProjectAliasProps {
-  project: IProject | null;
-}
+export default ProjectSlugPage;
