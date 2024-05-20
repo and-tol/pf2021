@@ -57,11 +57,11 @@ export const pages: Page[] = [
     page: 'Projects',
     path: `/${IndexPagesId.Projects}`,
   },
-  {
-    id: IndexPagesId.Contact,
-    page: 'Contact',
-    path: `/${IndexPagesId.Contact}`,
-  },
+  // {
+  //   id: IndexPagesId.Contact,
+  //   page: 'Contact',
+  //   path: `/${IndexPagesId.Contact}`,
+  // },
 ];
 
 export enum AppConfigLang {
