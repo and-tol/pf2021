@@ -17,7 +17,7 @@ type PropsType = {
 const ProjectSlugPage: NextPage<PropsType> = ({
   project = null,
 }): ReactElement => {
-  const { path, image } = project || {};
+  const { path, image } = project ?? {};
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (

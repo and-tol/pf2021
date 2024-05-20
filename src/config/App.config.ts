@@ -63,3 +63,8 @@ export const pages: Page[] = [
     path: `/${IndexPagesId.Contact}`,
   },
 ];
+
+export enum AppConfigLang {
+  ru = 'ru',
+  en = 'en',
+}

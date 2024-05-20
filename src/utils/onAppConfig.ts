@@ -1,26 +1,26 @@
-import { AppConfig, IAppConfigLang } from '../config/App.config';
+import { AppConfigLang } from '../config/App.config';
 
 export const onAppConfig = (
   locale: string | undefined
-): IAppConfigLang | undefined => {
-  let t: IAppConfigLang | undefined = undefined;
+): AppConfigLang | undefined => {
+  let t: AppConfigLang | undefined = undefined;
 
   if (!locale) {
-    t = AppConfig.en;
+    t = AppConfigLang.en;
   }
 
   switch (locale) {
     case 'ru':
-      t = AppConfig.ru;
+      t = AppConfigLang.ru;
       break;
     case 'ru-Ru':
-      t = AppConfig.ru;
+      t = AppConfigLang.ru;
       break;
     case 'en':
-      t = AppConfig.en;
+      t = AppConfigLang.en;
       break;
     case 'en-Us':
-      t = AppConfig.en;
+      t = AppConfigLang.en;
       break;
 
     default:
