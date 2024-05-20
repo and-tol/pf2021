@@ -1,3 +1,7 @@
 {
-  "cSpell.language": "ru,en-US"
+  "cSpell.language": "ru,en-US",
+  "i18next.i18nPaths": "d:/MY_PORTFOLIO/MyPortfolioSite/pf2021/public/locales",
+  "i18n-ally.localesPaths": [
+    "public/locales"
+  ]
 }

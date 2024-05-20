@@ -1,10 +1,11 @@
 import fetch from 'node-fetch';
 import stream from 'stream';
 import { promisify } from 'util';
+import { NAME_CV_FILE } from '../../constants/constants';
 
 const pipeline = promisify(stream.pipeline);
 const url = {
-  en: `${process.env.API_HOST}/data/CV_AndrejsTolstojs_e.pdf`,
+  en: `${process.env.API_HOST}/data/${NAME_CV_FILE}`,
 };
 
 const handler = async (req, res) => {
@@ -18,11 +19,9 @@ const handler = async (req, res) => {
   }
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(
-    'Content-Disposition',
-    'attachment; filename=CV_AndrejsTolstojs_e.pdf'
-  );
+  res.setHeader('Content-Disposition', `attachment; filename=${NAME_CV_FILE}`);
 
+  // @ts-ignore
   await pipeline(response.body, res);
 };
 
